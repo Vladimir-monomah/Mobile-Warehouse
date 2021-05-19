@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityManager.cs" />
+    <Compile Include="MobExpressDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MobExpressDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Админка\Администратор.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Админка\Администратор.Designer.cs">
+      <DependentUpon>Администратор.cs</DependentUpon>
+    </Compile>
     <Compile Include="Работа внутри БД.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +106,17 @@
     <EmbeddedResource Include="РегАвт\Смена пароля.resx">
       <DependentUpon>Смена пароля.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="MobExpressDataSet.xsc">
+      <DependentUpon>MobExpressDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MobExpressDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MobExpressDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MobExpressDataSet.xss">
+      <DependentUpon>MobExpressDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

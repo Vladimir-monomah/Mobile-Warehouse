@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mobile_Warehouse
+namespace Mobile_Warehouse.Админка
 {
-    public partial class Работа_внутри_БД : Form
+    public partial class Администратор : Form
     {
-        public Работа_внутри_БД(MobExpressDataSet.ПользователиRow user)
+        public Администратор()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
     }
 }

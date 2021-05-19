@@ -99,6 +99,7 @@
             this.textBoxPassword.MaxLength = 30;
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(267, 39);
             this.textBoxPassword.TabIndex = 61;
             // 
@@ -131,6 +132,7 @@
             this.textBoxPatronomic.Name = "textBoxPatronomic";
             this.textBoxPatronomic.Size = new System.Drawing.Size(267, 39);
             this.textBoxPatronomic.TabIndex = 58;
+            this.textBoxPatronomic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSername_KeyPress);
             // 
             // textBoxName
             // 
@@ -141,6 +143,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(267, 39);
             this.textBoxName.TabIndex = 57;
+            this.textBoxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSername_KeyPress);
             // 
             // textBoxSername
             // 
@@ -151,6 +154,7 @@
             this.textBoxSername.Name = "textBoxSername";
             this.textBoxSername.Size = new System.Drawing.Size(267, 39);
             this.textBoxSername.TabIndex = 56;
+            this.textBoxSername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSername_KeyPress);
             // 
             // buttonRegister
             // 
@@ -161,6 +165,7 @@
             this.buttonRegister.TabIndex = 55;
             this.buttonRegister.Text = "Зарегистрироваться";
             this.buttonRegister.UseVisualStyleBackColor = true;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
             // labelPassword
             // 

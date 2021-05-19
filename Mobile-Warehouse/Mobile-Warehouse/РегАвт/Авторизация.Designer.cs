@@ -54,15 +54,17 @@
             this.PasswordChangeLabel.Name = "PasswordChangeLabel";
             this.PasswordChangeLabel.Size = new System.Drawing.Size(0, 17);
             this.PasswordChangeLabel.TabIndex = 36;
+            this.PasswordChangeLabel.Click += new System.EventHandler(this.PasswordChangeLabel_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(131, 374);
+            this.button1.Location = new System.Drawing.Point(125, 382);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 32);
             this.button1.TabIndex = 35;
             this.button1.Text = "Смена пароля";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.PasswordChangeLabel_Click);
             // 
             // pictureBox2
             // 
@@ -74,6 +76,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 33;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // invisibleButton
             // 
@@ -93,6 +96,7 @@
             this.pictureBoxRestart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxRestart.TabIndex = 32;
             this.pictureBoxRestart.TabStop = false;
+            this.pictureBoxRestart.Click += new System.EventHandler(this.pictureBoxRestart_Click);
             // 
             // pictureBoxRegistration
             // 
@@ -104,6 +108,7 @@
             this.pictureBoxRegistration.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxRegistration.TabIndex = 31;
             this.pictureBoxRegistration.TabStop = false;
+            this.pictureBoxRegistration.Click += new System.EventHandler(this.pictureBoxRegistration_Click);
             // 
             // tbPassword
             // 
@@ -193,6 +198,7 @@
             this.Name = "Авторизация";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Авторизация_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRestart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRegistration)).EndInit();

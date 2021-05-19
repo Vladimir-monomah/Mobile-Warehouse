@@ -1,6 +1,6 @@
 ﻿namespace Mobile_Warehouse
 {
-    partial class Form1
+    partial class Работа_внутри_БД
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Работа_внутри_БД));
             this.SuspendLayout();
             // 
-            // Form1
+            // Работа_внутри_БД
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -40,7 +40,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Работа_внутри_БД";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mobile Warehouse";
             this.ResumeLayout(false);
