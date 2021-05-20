@@ -93,6 +93,26 @@ namespace Mobile_Warehouse.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap customer_vector_3 {
+            get {
+                object obj = ResourceManager.GetObject("customer_vector_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap J_Je0r0q30444c {
+            get {
+                object obj = ResourceManager.GetObject("J_Je0r0q30444c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap K1d11vBjtLU1 {
             get {
                 object obj = ResourceManager.GetObject("K1d11vBjtLU1", resourceCulture);
@@ -121,12 +141,62 @@ namespace Mobile_Warehouse.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap no_photo_girl {
+            get {
+                object obj = ResourceManager.GetObject("no_photo_girl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
         /// </summary>
         internal static System.Drawing.Icon Phone_31105 {
             get {
                 object obj = ResourceManager.GetObject("Phone_31105", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap s1200 {
+            get {
+                object obj = ResourceManager.GetObject("s1200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap кнопка {
+            get {
+                object obj = ResourceManager.GetObject("кнопка", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap кнопка_2 {
+            get {
+                object obj = ResourceManager.GetObject("кнопка_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap кнопка_3 {
+            get {
+                object obj = ResourceManager.GetObject("кнопка_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

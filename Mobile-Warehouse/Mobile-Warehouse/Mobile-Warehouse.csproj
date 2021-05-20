@@ -151,5 +151,26 @@
   <ItemGroup>
     <None Include="Resources\25132894.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J_Je0r0q30444c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-photo-girl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer-vector-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\кнопка 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\кнопка 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\кнопка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s1200.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
