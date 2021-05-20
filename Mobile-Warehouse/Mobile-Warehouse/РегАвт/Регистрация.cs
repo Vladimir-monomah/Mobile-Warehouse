@@ -68,7 +68,7 @@ namespace Mobile_Warehouse.РегАвт
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            if (!CheckTextBoxes())
+            if (!this.CheckTextBoxes())
             {
                 MessageBox.Show("Заполните все поля","Информация",
                     MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -85,7 +85,7 @@ namespace Mobile_Warehouse.РегАвт
             EntityManager.UpdateUsers();
 
             MessageBox.Show("Регистрация успешна");
-            Close();
+            this.Close();
         }
 
         /// <summary>

@@ -14,7 +14,7 @@ namespace Mobile_Warehouse.Админка
     {
         public Администратор()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

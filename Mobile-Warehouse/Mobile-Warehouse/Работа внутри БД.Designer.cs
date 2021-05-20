@@ -33,24 +33,24 @@
             this.сменитьАккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сменаПользователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ведомостиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.карточкиПоставщиковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.товарToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.брендыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ведомостиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ведомостьОПоставкахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbProvider = new System.Windows.Forms.PictureBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.labelLib = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -81,6 +81,7 @@
             this.сменаПользователяToolStripMenuItem.Name = "сменаПользователяToolStripMenuItem";
             this.сменаПользователяToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
             this.сменаПользователяToolStripMenuItem.Text = "Смена пользователя";
+            this.сменаПользователяToolStripMenuItem.Click += new System.EventHandler(this.сменаПользователяToolStripMenuItem_Click);
             // 
             // справочникиToolStripMenuItem
             // 
@@ -93,24 +94,6 @@
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.справочникиToolStripMenuItem.Text = "Справочники";
-            // 
-            // ведомостиToolStripMenuItem
-            // 
-            this.ведомостиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ведомостьОПоставкахToolStripMenuItem});
-            this.ведомостиToolStripMenuItem.Name = "ведомостиToolStripMenuItem";
-            this.ведомостиToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
-            this.ведомостиToolStripMenuItem.Text = "Ведомости";
-            // 
-            // справкаToolStripMenuItem
-            // 
-            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.помощьToolStripMenuItem,
-            this.toolStripMenuItem3,
-            this.оПрограммеToolStripMenuItem});
-            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
-            this.справкаToolStripMenuItem.Text = "Справка";
             // 
             // карточкиПоставщиковToolStripMenuItem
             // 
@@ -143,12 +126,30 @@
             this.брендыToolStripMenuItem.Size = new System.Drawing.Size(295, 26);
             this.брендыToolStripMenuItem.Text = "Бренды";
             // 
+            // ведомостиToolStripMenuItem
+            // 
+            this.ведомостиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ведомостьОПоставкахToolStripMenuItem});
+            this.ведомостиToolStripMenuItem.Name = "ведомостиToolStripMenuItem";
+            this.ведомостиToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+            this.ведомостиToolStripMenuItem.Text = "Ведомости";
+            // 
             // ведомостьОПоставкахToolStripMenuItem
             // 
             this.ведомостьОПоставкахToolStripMenuItem.Name = "ведомостьОПоставкахToolStripMenuItem";
             this.ведомостьОПоставкахToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
             this.ведомостьОПоставкахToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
             this.ведомостьОПоставкахToolStripMenuItem.Text = "Ведомость о поставках";
+            // 
+            // справкаToolStripMenuItem
+            // 
+            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.помощьToolStripMenuItem,
+            this.toolStripMenuItem3,
+            this.оПрограммеToolStripMenuItem});
+            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.справкаToolStripMenuItem.Text = "Справка";
             // 
             // помощьToolStripMenuItem
             // 
@@ -174,22 +175,23 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.White;
-            this.panel.Controls.Add(this.pictureBox2);
+            this.panel.Controls.Add(this.pbProvider);
             this.panel.Location = new System.Drawing.Point(0, 31);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(800, 53);
             this.panel.TabIndex = 5;
             // 
-            // pictureBox2
+            // pbProvider
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Image = global::Mobile_Warehouse.Properties.Resources.no_photo_girl;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pbProvider.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbProvider.Image = global::Mobile_Warehouse.Properties.Resources.no_photo_girl;
+            this.pbProvider.Location = new System.Drawing.Point(12, 4);
+            this.pbProvider.Name = "pbProvider";
+            this.pbProvider.Size = new System.Drawing.Size(45, 45);
+            this.pbProvider.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProvider.TabIndex = 0;
+            this.pbProvider.TabStop = false;
+            this.pbProvider.Click += new System.EventHandler(this.AddTabControl);
             // 
             // tabControl
             // 
@@ -203,6 +205,7 @@
             this.tabControl.Size = new System.Drawing.Size(800, 307);
             this.tabControl.TabIndex = 6;
             this.tabControl.Visible = false;
+            this.tabControl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl_MouseClick);
             // 
             // labelLib
             // 
@@ -230,10 +233,12 @@
             this.Name = "Работа_внутри_БД";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mobile Warehouse";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Работа_внутри_БД_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,7 +262,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbProvider;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.Label labelLib;
     }

@@ -86,6 +86,7 @@
             this.invisibleButton.TabIndex = 34;
             this.invisibleButton.Text = "button1";
             this.invisibleButton.UseVisualStyleBackColor = true;
+            this.invisibleButton.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBoxRestart
             // 
