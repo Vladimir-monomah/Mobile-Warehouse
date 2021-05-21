@@ -33,6 +33,13 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.полDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.брендDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаПоступленияТовараDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.реальнаяДатаПривозаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.поставщикиЗапросBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mobExpressDataSet = new Mobile_Warehouse.MobExpressDataSet();
             this.buttonPrint = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,17 +50,13 @@
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.mobExpressDataSet = new Mobile_Warehouse.MobExpressDataSet();
+            this.поставщикиЗапросTableAdapter = new Mobile_Warehouse.MobExpressDataSetTableAdapters.ПоставщикиЗапросTableAdapter();
             this.поставщикиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.поставщикиTableAdapter = new Mobile_Warehouse.MobExpressDataSetTableAdapters.ПоставщикиTableAdapter();
-            this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.полDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.брендDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаПоступленияТовараDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.реальнаяДатаПривозаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.поставщикиЗапросBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mobExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.поставщикиBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -86,7 +89,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1473, 742);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Карточки читателей";
+            this.tabPage3.Text = "Карточки поставщиков";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // dataGridView
@@ -103,126 +106,13 @@
             this.брендDataGridViewTextBoxColumn,
             this.датаПоступленияТовараDataGridViewTextBoxColumn,
             this.реальнаяДатаПривозаDataGridViewTextBoxColumn});
-            this.dataGridView.DataSource = this.поставщикиBindingSource;
+            this.dataGridView.DataSource = this.поставщикиЗапросBindingSource;
             this.dataGridView.Location = new System.Drawing.Point(8, 106);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(1457, 628);
             this.dataGridView.TabIndex = 16;
-            // 
-            // buttonPrint
-            // 
-            this.buttonPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPrint.Location = new System.Drawing.Point(1197, 35);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(86, 30);
-            this.buttonPrint.TabIndex = 15;
-            this.buttonPrint.Text = "Печать";
-            this.buttonPrint.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(73, 70);
-            this.textBox3.MaxLength = 30;
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(1354, 30);
-            this.textBox3.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(3, 71);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 21);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Поиск";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(671, 4);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(216, 21);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Карточка поставщиков";
-            // 
-            // button11
-            // 
-            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button11.Image = global::Mobile_Warehouse.Properties.Resources.кнопка_3;
-            this.button11.Location = new System.Drawing.Point(1433, 70);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(32, 30);
-            this.button11.TabIndex = 4;
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // buttonExport
-            // 
-            this.buttonExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExport.Location = new System.Drawing.Point(1289, 35);
-            this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(86, 30);
-            this.buttonExport.TabIndex = 6;
-            this.buttonExport.Text = "Экспорт";
-            this.buttonExport.UseVisualStyleBackColor = true;
-            // 
-            // buttonImport
-            // 
-            this.buttonImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonImport.Location = new System.Drawing.Point(1381, 35);
-            this.buttonImport.Name = "buttonImport";
-            this.buttonImport.Size = new System.Drawing.Size(86, 30);
-            this.buttonImport.TabIndex = 6;
-            this.buttonImport.Text = "Импорт";
-            this.buttonImport.UseVisualStyleBackColor = true;
-            // 
-            // buttonRefresh
-            // 
-            this.buttonRefresh.Location = new System.Drawing.Point(120, 28);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(102, 30);
-            this.buttonRefresh.TabIndex = 6;
-            this.buttonRefresh.Text = "Сохранить";
-            this.buttonRefresh.UseVisualStyleBackColor = true;
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Location = new System.Drawing.Point(228, 28);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(107, 30);
-            this.buttonDelete.TabIndex = 7;
-            this.buttonDelete.Text = "Удалить";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Visible = false;
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Location = new System.Drawing.Point(5, 28);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(109, 30);
-            this.buttonAdd.TabIndex = 9;
-            this.buttonAdd.Text = "Добавить";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            // 
-            // mobExpressDataSet
-            // 
-            this.mobExpressDataSet.DataSetName = "MobExpressDataSet";
-            this.mobExpressDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // поставщикиBindingSource
-            // 
-            this.поставщикиBindingSource.DataMember = "Поставщики";
-            this.поставщикиBindingSource.DataSource = this.mobExpressDataSet;
-            // 
-            // поставщикиTableAdapter
-            // 
-            this.поставщикиTableAdapter.ClearBeforeFill = true;
+            this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             // 
             // фИОDataGridViewTextBoxColumn
             // 
@@ -264,6 +154,136 @@
             this.реальнаяДатаПривозаDataGridViewTextBoxColumn.Name = "реальнаяДатаПривозаDataGridViewTextBoxColumn";
             this.реальнаяДатаПривозаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // поставщикиЗапросBindingSource
+            // 
+            this.поставщикиЗапросBindingSource.DataMember = "ПоставщикиЗапрос";
+            this.поставщикиЗапросBindingSource.DataSource = this.mobExpressDataSet;
+            // 
+            // mobExpressDataSet
+            // 
+            this.mobExpressDataSet.DataSetName = "MobExpressDataSet";
+            this.mobExpressDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPrint.Location = new System.Drawing.Point(1197, 35);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(86, 30);
+            this.buttonPrint.TabIndex = 15;
+            this.buttonPrint.Text = "Печать";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Location = new System.Drawing.Point(73, 70);
+            this.textBox3.MaxLength = 30;
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(1354, 30);
+            this.textBox3.TabIndex = 12;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(3, 71);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 21);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Поиск";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(671, 4);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(216, 21);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Карточка поставщиков";
+            // 
+            // button11
+            // 
+            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button11.Image = global::Mobile_Warehouse.Properties.Resources.кнопка_3;
+            this.button11.Location = new System.Drawing.Point(1433, 70);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(32, 30);
+            this.button11.TabIndex = 4;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // buttonExport
+            // 
+            this.buttonExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExport.Location = new System.Drawing.Point(1289, 35);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(86, 30);
+            this.buttonExport.TabIndex = 6;
+            this.buttonExport.Text = "Экспорт";
+            this.buttonExport.UseVisualStyleBackColor = true;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
+            // 
+            // buttonImport
+            // 
+            this.buttonImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonImport.Location = new System.Drawing.Point(1381, 35);
+            this.buttonImport.Name = "buttonImport";
+            this.buttonImport.Size = new System.Drawing.Size(86, 30);
+            this.buttonImport.TabIndex = 6;
+            this.buttonImport.Text = "Импорт";
+            this.buttonImport.UseVisualStyleBackColor = true;
+            this.buttonImport.Click += new System.EventHandler(this.buttonImport_Click);
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Location = new System.Drawing.Point(233, 28);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(102, 30);
+            this.buttonRefresh.TabIndex = 6;
+            this.buttonRefresh.Text = "Сохранить";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Visible = false;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(120, 28);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(107, 30);
+            this.buttonDelete.TabIndex = 7;
+            this.buttonDelete.Text = "Удалить";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(5, 28);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(109, 30);
+            this.buttonAdd.TabIndex = 9;
+            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // поставщикиЗапросTableAdapter
+            // 
+            this.поставщикиЗапросTableAdapter.ClearBeforeFill = true;
+            // 
+            // поставщикиBindingSource
+            // 
+            this.поставщикиBindingSource.DataMember = "Поставщики";
+            this.поставщикиBindingSource.DataSource = this.mobExpressDataSet;
+            // 
+            // поставщикиTableAdapter
+            // 
+            this.поставщикиTableAdapter.ClearBeforeFill = true;
+            // 
             // Объекты
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -280,6 +300,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.поставщикиЗапросBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mobExpressDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.поставщикиBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -302,12 +323,14 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonAdd;
         private MobExpressDataSet mobExpressDataSet;
-        private System.Windows.Forms.BindingSource поставщикиBindingSource;
-        private MobExpressDataSetTableAdapters.ПоставщикиTableAdapter поставщикиTableAdapter;
+        private System.Windows.Forms.BindingSource поставщикиЗапросBindingSource;
+        private MobExpressDataSetTableAdapters.ПоставщикиЗапросTableAdapter поставщикиЗапросTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn фИОDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn полDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn брендDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn датаПоступленияТовараDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn реальнаяДатаПривозаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource поставщикиBindingSource;
+        private MobExpressDataSetTableAdapters.ПоставщикиTableAdapter поставщикиTableAdapter;
     }
 }
