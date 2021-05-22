@@ -15,6 +15,7 @@ namespace Mobile_Warehouse
         static MobExpressDataSet MobExpressDataSet = new MobExpressDataSet();
 
         private static ПользователиTableAdapter пользователиTableAdapter = new ПользователиTableAdapter();
+        private static ПоставщикиTableAdapter ПоставщикиTableAdapter = new ПоставщикиTableAdapter();
 
         public static ПользователиDataTable UserDataTable
         {
@@ -24,9 +25,22 @@ namespace Mobile_Warehouse
             }
         }
 
+        public static ПоставщикиDataTable ProviderDataTable
+        {
+            get
+            {
+                return MobExpressDataSet.Поставщики;
+            }
+        }
+
         public static void UpdateUsers()
         {
             пользователиTableAdapter.Adapter.Update(UserDataTable);
+        }
+
+        public static void UpdateProviders()
+        {
+            ПоставщикиTableAdapter.Adapter.Update(ProviderDataTable);
         }
 
         /// <summary>
@@ -53,6 +67,35 @@ namespace Mobile_Warehouse
             FillFilteredTable(пользователиTableAdapter.Adapter, filterUserCommand, UserDataTable);
 
             return UserDataTable;
+        }
+
+        /// <summary>
+        /// Возвращает отфильтрованную таблицу поставщиков по условию <paramref name="condition"/>
+        /// </summary>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        public static ПоставщикиDataTable FilterProviders(string condition = null)
+        {
+            var whereCondition = string.Empty;
+            if (!string.IsNullOrEmpty(condition))
+            {
+                whereCondition = $"WHERE {condition}";
+            }
+
+            var filterProvidersCommand = new OleDbCommand()
+            {
+                Connection = ПоставщикиTableAdapter.Connection,
+                CommandText = "SELECT Id, [Номер карточки], ФИО, Наименование, Адрес, Телефон, " +
+                "Email, ИНН, КПП, ОКПО, [Банковские реквизиты], Бренд, [Тип товара], [Общая сумма закупок]" +
+                "[Общая сумма возвратов], [Сумма (закупки-возврты)], Депозит, [Долг перед поставщиком], " +
+                "[Дата поступления товара], [Реальная дата привоза], Прострочка, Примечание" +
+                $"FROM Поставщики {whereCondition}",
+                CommandType = global::System.Data.CommandType.Text
+            };
+
+            FillFilteredTable(ПоставщикиTableAdapter.Adapter, filterProvidersCommand, ProviderDataTable);
+
+            return ProviderDataTable;
         }
 
         /// <summary>

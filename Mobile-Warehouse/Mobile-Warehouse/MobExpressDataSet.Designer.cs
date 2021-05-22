@@ -1016,11 +1016,7 @@ namespace Mobile_Warehouse {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnТип_принадлежности;
-            
-            private global::System.Data.DataColumn columnВид_бренда;
-            
-            private global::System.Data.DataColumn columnЗначение_бренда;
+            private global::System.Data.DataColumn columnНаименование;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -1065,25 +1061,9 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Тип_принадлежностиColumn {
+            public global::System.Data.DataColumn НаименованиеColumn {
                 get {
-                    return this.columnТип_принадлежности;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Вид_брендаColumn {
-                get {
-                    return this.columnВид_бренда;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Значение_брендаColumn {
-                get {
-                    return this.columnЗначение_бренда;
+                    return this.columnНаименование;
                 }
             }
             
@@ -1124,13 +1104,11 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public БрендыRow AddБрендыRow(int Тип_принадлежности, int Вид_бренда, string Значение_бренда) {
+            public БрендыRow AddБрендыRow(string Наименование) {
                 БрендыRow rowБрендыRow = ((БрендыRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Тип_принадлежности,
-                        Вид_бренда,
-                        Значение_бренда};
+                        Наименование};
                 rowБрендыRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowБрендыRow);
                 return rowБрендыRow;
@@ -1161,9 +1139,7 @@ namespace Mobile_Warehouse {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnТип_принадлежности = base.Columns["Тип принадлежности"];
-                this.columnВид_бренда = base.Columns["Вид бренда"];
-                this.columnЗначение_бренда = base.Columns["Значение бренда"];
+                this.columnНаименование = base.Columns["Наименование"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1171,12 +1147,8 @@ namespace Mobile_Warehouse {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this.columnТип_принадлежности = new global::System.Data.DataColumn("Тип принадлежности", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnТип_принадлежности);
-                this.columnВид_бренда = new global::System.Data.DataColumn("Вид бренда", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnВид_бренда);
-                this.columnЗначение_бренда = new global::System.Data.DataColumn("Значение бренда", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnЗначение_бренда);
+                this.columnНаименование = new global::System.Data.DataColumn("Наименование", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНаименование);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -1184,7 +1156,7 @@ namespace Mobile_Warehouse {
                 this.columnId.AutoIncrementStep = -1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
-                this.columnЗначение_бренда.MaxLength = 255;
+                this.columnНаименование.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4750,27 +4722,45 @@ namespace Mobile_Warehouse {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnНомер_карточки;
-            
             private global::System.Data.DataColumn columnФИО;
             
-            private global::System.Data.DataColumn columnПол;
+            private global::System.Data.DataColumn columnНаименование;
             
-            private global::System.Data.DataColumn columnДолжность;
+            private global::System.Data.DataColumn columnАдрес;
             
-            private global::System.Data.DataColumn columnРуководитель;
+            private global::System.Data.DataColumn columnТелефон;
             
-            private global::System.Data.DataColumn columnРаботающий;
+            private global::System.Data.DataColumn columnEmail;
             
-            private global::System.Data.DataColumn columnТабельный_номер;
+            private global::System.Data.DataColumn columnИНН;
+            
+            private global::System.Data.DataColumn columnКПП;
+            
+            private global::System.Data.DataColumn columnОКПО;
+            
+            private global::System.Data.DataColumn columnБанковские_реквизиты;
             
             private global::System.Data.DataColumn columnБренд;
+            
+            private global::System.Data.DataColumn columnТип_товара;
+            
+            private global::System.Data.DataColumn columnОбщая_сумма_закупок;
+            
+            private global::System.Data.DataColumn columnОбщая_сумма_возвратов;
+            
+            private global::System.Data.DataColumn _columnСумма__закупки_возвраты_;
+            
+            private global::System.Data.DataColumn columnДепозит;
+            
+            private global::System.Data.DataColumn columnДолг_перед_поставщиком;
             
             private global::System.Data.DataColumn columnДата_поступления_товара;
             
             private global::System.Data.DataColumn columnРеальная_дата_привоза;
             
             private global::System.Data.DataColumn columnПросрочка;
+            
+            private global::System.Data.DataColumn columnПримечание;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -4815,14 +4805,6 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Номер_карточкиColumn {
-                get {
-                    return this.columnНомер_карточки;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ФИОColumn {
                 get {
                     return this.columnФИО;
@@ -4831,41 +4813,65 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ПолColumn {
+            public global::System.Data.DataColumn НаименованиеColumn {
                 get {
-                    return this.columnПол;
+                    return this.columnНаименование;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ДолжностьColumn {
+            public global::System.Data.DataColumn АдресColumn {
                 get {
-                    return this.columnДолжность;
+                    return this.columnАдрес;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn РуководительColumn {
+            public global::System.Data.DataColumn ТелефонColumn {
                 get {
-                    return this.columnРуководитель;
+                    return this.columnТелефон;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn РаботающийColumn {
+            public global::System.Data.DataColumn EmailColumn {
                 get {
-                    return this.columnРаботающий;
+                    return this.columnEmail;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Табельный_номерColumn {
+            public global::System.Data.DataColumn ИННColumn {
                 get {
-                    return this.columnТабельный_номер;
+                    return this.columnИНН;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn КППColumn {
+                get {
+                    return this.columnКПП;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ОКПОColumn {
+                get {
+                    return this.columnОКПО;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Банковские_реквизитыColumn {
+                get {
+                    return this.columnБанковские_реквизиты;
                 }
             }
             
@@ -4874,6 +4880,54 @@ namespace Mobile_Warehouse {
             public global::System.Data.DataColumn БрендColumn {
                 get {
                     return this.columnБренд;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Тип_товараColumn {
+                get {
+                    return this.columnТип_товара;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Общая_сумма_закупокColumn {
+                get {
+                    return this.columnОбщая_сумма_закупок;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Общая_сумма_возвратовColumn {
+                get {
+                    return this.columnОбщая_сумма_возвратов;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn _Сумма__закупки_возвраты_Column {
+                get {
+                    return this._columnСумма__закупки_возвраты_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ДепозитColumn {
+                get {
+                    return this.columnДепозит;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Долг_перед_поставщикомColumn {
+                get {
+                    return this.columnДолг_перед_поставщиком;
                 }
             }
             
@@ -4898,6 +4952,14 @@ namespace Mobile_Warehouse {
             public global::System.Data.DataColumn ПросрочкаColumn {
                 get {
                     return this.columnПросрочка;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ПримечаниеColumn {
+                get {
+                    return this.columnПримечание;
                 }
             }
             
@@ -4938,21 +5000,50 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ПоставщикиRow AddПоставщикиRow(int Номер_карточки, string ФИО, string Пол, string Должность, string Руководитель, bool Работающий, int Табельный_номер, int Бренд, System.DateTime Дата_поступления_товара, System.DateTime Реальная_дата_привоза, bool Просрочка) {
+            public ПоставщикиRow AddПоставщикиRow(
+                        string ФИО, 
+                        string Наименование, 
+                        string Адрес, 
+                        int Телефон, 
+                        string Email, 
+                        int ИНН, 
+                        int КПП, 
+                        int ОКПО, 
+                        string Банковские_реквизиты, 
+                        string Бренд, 
+                        string Тип_товара, 
+                        int Общая_сумма_закупок, 
+                        int Общая_сумма_возвратов, 
+                        int _Сумма__закупки_возвраты_, 
+                        int Депозит, 
+                        int Долг_перед_поставщиком, 
+                        System.DateTime Дата_поступления_товара, 
+                        System.DateTime Реальная_дата_привоза, 
+                        bool Просрочка, 
+                        string Примечание) {
                 ПоставщикиRow rowПоставщикиRow = ((ПоставщикиRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Номер_карточки,
                         ФИО,
-                        Пол,
-                        Должность,
-                        Руководитель,
-                        Работающий,
-                        Табельный_номер,
+                        Наименование,
+                        Адрес,
+                        Телефон,
+                        Email,
+                        ИНН,
+                        КПП,
+                        ОКПО,
+                        Банковские_реквизиты,
                         Бренд,
+                        Тип_товара,
+                        Общая_сумма_закупок,
+                        Общая_сумма_возвратов,
+                        _Сумма__закупки_возвраты_,
+                        Депозит,
+                        Долг_перед_поставщиком,
                         Дата_поступления_товара,
                         Реальная_дата_привоза,
-                        Просрочка};
+                        Просрочка,
+                        Примечание};
                 rowПоставщикиRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowПоставщикиRow);
                 return rowПоставщикиRow;
@@ -4983,17 +5074,26 @@ namespace Mobile_Warehouse {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnНомер_карточки = base.Columns["Номер карточки"];
                 this.columnФИО = base.Columns["ФИО"];
-                this.columnПол = base.Columns["Пол"];
-                this.columnДолжность = base.Columns["Должность"];
-                this.columnРуководитель = base.Columns["Руководитель"];
-                this.columnРаботающий = base.Columns["Работающий"];
-                this.columnТабельный_номер = base.Columns["Табельный_номер"];
+                this.columnНаименование = base.Columns["Наименование"];
+                this.columnАдрес = base.Columns["Адрес"];
+                this.columnТелефон = base.Columns["Телефон"];
+                this.columnEmail = base.Columns["Email"];
+                this.columnИНН = base.Columns["ИНН"];
+                this.columnКПП = base.Columns["КПП"];
+                this.columnОКПО = base.Columns["ОКПО"];
+                this.columnБанковские_реквизиты = base.Columns["Банковские реквизиты"];
                 this.columnБренд = base.Columns["Бренд"];
+                this.columnТип_товара = base.Columns["Тип товара"];
+                this.columnОбщая_сумма_закупок = base.Columns["Общая сумма закупок"];
+                this.columnОбщая_сумма_возвратов = base.Columns["Общая сумма возвратов"];
+                this._columnСумма__закупки_возвраты_ = base.Columns["Сумма (закупки-возвраты)"];
+                this.columnДепозит = base.Columns["Депозит"];
+                this.columnДолг_перед_поставщиком = base.Columns["Долг перед поставщиком"];
                 this.columnДата_поступления_товара = base.Columns["Дата поступления товара"];
                 this.columnРеальная_дата_привоза = base.Columns["Реальная дата привоза"];
                 this.columnПросрочка = base.Columns["Просрочка"];
+                this.columnПримечание = base.Columns["Примечание"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5001,28 +5101,48 @@ namespace Mobile_Warehouse {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this.columnНомер_карточки = new global::System.Data.DataColumn("Номер карточки", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНомер_карточки);
                 this.columnФИО = new global::System.Data.DataColumn("ФИО", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnФИО);
-                this.columnПол = new global::System.Data.DataColumn("Пол", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnПол);
-                this.columnДолжность = new global::System.Data.DataColumn("Должность", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnДолжность);
-                this.columnРуководитель = new global::System.Data.DataColumn("Руководитель", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnРуководитель);
-                this.columnРаботающий = new global::System.Data.DataColumn("Работающий", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnРаботающий);
-                this.columnТабельный_номер = new global::System.Data.DataColumn("Табельный_номер", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnТабельный_номер);
-                this.columnБренд = new global::System.Data.DataColumn("Бренд", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnНаименование = new global::System.Data.DataColumn("Наименование", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНаименование);
+                this.columnАдрес = new global::System.Data.DataColumn("Адрес", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnАдрес);
+                this.columnТелефон = new global::System.Data.DataColumn("Телефон", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnТелефон);
+                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail);
+                this.columnИНН = new global::System.Data.DataColumn("ИНН", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnИНН);
+                this.columnКПП = new global::System.Data.DataColumn("КПП", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnКПП);
+                this.columnОКПО = new global::System.Data.DataColumn("ОКПО", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОКПО);
+                this.columnБанковские_реквизиты = new global::System.Data.DataColumn("Банковские реквизиты", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnБанковские_реквизиты);
+                this.columnБренд = new global::System.Data.DataColumn("Бренд", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnБренд);
+                this.columnТип_товара = new global::System.Data.DataColumn("Тип товара", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnТип_товара);
+                this.columnОбщая_сумма_закупок = new global::System.Data.DataColumn("Общая сумма закупок", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОбщая_сумма_закупок);
+                this.columnОбщая_сумма_возвратов = new global::System.Data.DataColumn("Общая сумма возвратов", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОбщая_сумма_возвратов);
+                this._columnСумма__закупки_возвраты_ = new global::System.Data.DataColumn("Сумма (закупки-возвраты)", typeof(int), null, global::System.Data.MappingType.Element);
+                this._columnСумма__закупки_возвраты_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnСумма__закупки_возвраты_");
+                this._columnСумма__закупки_возвраты_.ExtendedProperties.Add("Generator_UserColumnName", "Сумма (закупки-возвраты)");
+                base.Columns.Add(this._columnСумма__закупки_возвраты_);
+                this.columnДепозит = new global::System.Data.DataColumn("Депозит", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnДепозит);
+                this.columnДолг_перед_поставщиком = new global::System.Data.DataColumn("Долг перед поставщиком", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnДолг_перед_поставщиком);
                 this.columnДата_поступления_товара = new global::System.Data.DataColumn("Дата поступления товара", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnДата_поступления_товара);
                 this.columnРеальная_дата_привоза = new global::System.Data.DataColumn("Реальная дата привоза", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnРеальная_дата_привоза);
                 this.columnПросрочка = new global::System.Data.DataColumn("Просрочка", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnПросрочка);
+                this.columnПримечание = new global::System.Data.DataColumn("Примечание", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnПримечание);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -5031,9 +5151,13 @@ namespace Mobile_Warehouse {
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnФИО.MaxLength = 255;
-                this.columnПол.MaxLength = 255;
-                this.columnДолжность.MaxLength = 255;
-                this.columnРуководитель.MaxLength = 255;
+                this.columnНаименование.MaxLength = 255;
+                this.columnАдрес.MaxLength = 255;
+                this.columnEmail.MaxLength = 536870910;
+                this.columnБанковские_реквизиты.MaxLength = 255;
+                this.columnБренд.MaxLength = 255;
+                this.columnТип_товара.MaxLength = 255;
+                this.columnПримечание.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6776,27 +6900,45 @@ namespace Mobile_Warehouse {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnНомер_карточки;
-            
             private global::System.Data.DataColumn columnФИО;
             
-            private global::System.Data.DataColumn columnПол;
+            private global::System.Data.DataColumn columnНаименование;
             
-            private global::System.Data.DataColumn columnДолжность;
+            private global::System.Data.DataColumn columnАдрес;
             
-            private global::System.Data.DataColumn columnРуководитель;
+            private global::System.Data.DataColumn columnТелефон;
             
-            private global::System.Data.DataColumn columnРаботающий;
+            private global::System.Data.DataColumn columnEmail;
             
-            private global::System.Data.DataColumn columnТабельный_номер;
+            private global::System.Data.DataColumn columnИНН;
+            
+            private global::System.Data.DataColumn columnКПП;
+            
+            private global::System.Data.DataColumn columnОКПО;
+            
+            private global::System.Data.DataColumn columnБанковские_реквизиты;
             
             private global::System.Data.DataColumn columnБренд;
+            
+            private global::System.Data.DataColumn columnТип_товара;
+            
+            private global::System.Data.DataColumn columnОбщая_сумма_закупок;
+            
+            private global::System.Data.DataColumn columnОбщая_сумма_возвратов;
+            
+            private global::System.Data.DataColumn _columnСумма__закупки_возвраты_;
+            
+            private global::System.Data.DataColumn columnДепозит;
+            
+            private global::System.Data.DataColumn columnДолг_перед_поставщиком;
             
             private global::System.Data.DataColumn columnДата_поступления_товара;
             
             private global::System.Data.DataColumn columnРеальная_дата_привоза;
             
             private global::System.Data.DataColumn columnПросрочка;
+            
+            private global::System.Data.DataColumn columnПримечание;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -6841,14 +6983,6 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Номер_карточкиColumn {
-                get {
-                    return this.columnНомер_карточки;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ФИОColumn {
                 get {
                     return this.columnФИО;
@@ -6857,41 +6991,65 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ПолColumn {
+            public global::System.Data.DataColumn НаименованиеColumn {
                 get {
-                    return this.columnПол;
+                    return this.columnНаименование;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ДолжностьColumn {
+            public global::System.Data.DataColumn АдресColumn {
                 get {
-                    return this.columnДолжность;
+                    return this.columnАдрес;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn РуководительColumn {
+            public global::System.Data.DataColumn ТелефонColumn {
                 get {
-                    return this.columnРуководитель;
+                    return this.columnТелефон;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn РаботающийColumn {
+            public global::System.Data.DataColumn EmailColumn {
                 get {
-                    return this.columnРаботающий;
+                    return this.columnEmail;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Табельный_номерColumn {
+            public global::System.Data.DataColumn ИННColumn {
                 get {
-                    return this.columnТабельный_номер;
+                    return this.columnИНН;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn КППColumn {
+                get {
+                    return this.columnКПП;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ОКПОColumn {
+                get {
+                    return this.columnОКПО;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Банковские_реквизитыColumn {
+                get {
+                    return this.columnБанковские_реквизиты;
                 }
             }
             
@@ -6900,6 +7058,54 @@ namespace Mobile_Warehouse {
             public global::System.Data.DataColumn БрендColumn {
                 get {
                     return this.columnБренд;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Тип_товараColumn {
+                get {
+                    return this.columnТип_товара;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Общая_сумма_закупокColumn {
+                get {
+                    return this.columnОбщая_сумма_закупок;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Общая_сумма_возвратовColumn {
+                get {
+                    return this.columnОбщая_сумма_возвратов;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn _Сумма__закупки_возвраты_Column {
+                get {
+                    return this._columnСумма__закупки_возвраты_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ДепозитColumn {
+                get {
+                    return this.columnДепозит;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Долг_перед_поставщикомColumn {
+                get {
+                    return this.columnДолг_перед_поставщиком;
                 }
             }
             
@@ -6924,6 +7130,14 @@ namespace Mobile_Warehouse {
             public global::System.Data.DataColumn ПросрочкаColumn {
                 get {
                     return this.columnПросрочка;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ПримечаниеColumn {
+                get {
+                    return this.columnПримечание;
                 }
             }
             
@@ -6964,21 +7178,50 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ПоставщикиЗапросRow AddПоставщикиЗапросRow(int Номер_карточки, string ФИО, string Пол, string Должность, string Руководитель, bool Работающий, int Табельный_номер, int Бренд, System.DateTime Дата_поступления_товара, System.DateTime Реальная_дата_привоза, bool Просрочка) {
+            public ПоставщикиЗапросRow AddПоставщикиЗапросRow(
+                        string ФИО, 
+                        string Наименование, 
+                        string Адрес, 
+                        int Телефон, 
+                        string Email, 
+                        int ИНН, 
+                        int КПП, 
+                        int ОКПО, 
+                        string Банковские_реквизиты, 
+                        string Бренд, 
+                        string Тип_товара, 
+                        int Общая_сумма_закупок, 
+                        int Общая_сумма_возвратов, 
+                        int _Сумма__закупки_возвраты_, 
+                        int Депозит, 
+                        int Долг_перед_поставщиком, 
+                        System.DateTime Дата_поступления_товара, 
+                        System.DateTime Реальная_дата_привоза, 
+                        bool Просрочка, 
+                        string Примечание) {
                 ПоставщикиЗапросRow rowПоставщикиЗапросRow = ((ПоставщикиЗапросRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Номер_карточки,
                         ФИО,
-                        Пол,
-                        Должность,
-                        Руководитель,
-                        Работающий,
-                        Табельный_номер,
+                        Наименование,
+                        Адрес,
+                        Телефон,
+                        Email,
+                        ИНН,
+                        КПП,
+                        ОКПО,
+                        Банковские_реквизиты,
                         Бренд,
+                        Тип_товара,
+                        Общая_сумма_закупок,
+                        Общая_сумма_возвратов,
+                        _Сумма__закупки_возвраты_,
+                        Депозит,
+                        Долг_перед_поставщиком,
                         Дата_поступления_товара,
                         Реальная_дата_привоза,
-                        Просрочка};
+                        Просрочка,
+                        Примечание};
                 rowПоставщикиЗапросRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowПоставщикиЗапросRow);
                 return rowПоставщикиЗапросRow;
@@ -7009,17 +7252,26 @@ namespace Mobile_Warehouse {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnНомер_карточки = base.Columns["Номер карточки"];
                 this.columnФИО = base.Columns["ФИО"];
-                this.columnПол = base.Columns["Пол"];
-                this.columnДолжность = base.Columns["Должность"];
-                this.columnРуководитель = base.Columns["Руководитель"];
-                this.columnРаботающий = base.Columns["Работающий"];
-                this.columnТабельный_номер = base.Columns["Табельный_номер"];
+                this.columnНаименование = base.Columns["Наименование"];
+                this.columnАдрес = base.Columns["Адрес"];
+                this.columnТелефон = base.Columns["Телефон"];
+                this.columnEmail = base.Columns["Email"];
+                this.columnИНН = base.Columns["ИНН"];
+                this.columnКПП = base.Columns["КПП"];
+                this.columnОКПО = base.Columns["ОКПО"];
+                this.columnБанковские_реквизиты = base.Columns["Банковские реквизиты"];
                 this.columnБренд = base.Columns["Бренд"];
+                this.columnТип_товара = base.Columns["Тип товара"];
+                this.columnОбщая_сумма_закупок = base.Columns["Общая сумма закупок"];
+                this.columnОбщая_сумма_возвратов = base.Columns["Общая сумма возвратов"];
+                this._columnСумма__закупки_возвраты_ = base.Columns["Сумма (закупки-возвраты)"];
+                this.columnДепозит = base.Columns["Депозит"];
+                this.columnДолг_перед_поставщиком = base.Columns["Долг перед поставщиком"];
                 this.columnДата_поступления_товара = base.Columns["Дата поступления товара"];
                 this.columnРеальная_дата_привоза = base.Columns["Реальная дата привоза"];
                 this.columnПросрочка = base.Columns["Просрочка"];
+                this.columnПримечание = base.Columns["Примечание"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7027,28 +7279,48 @@ namespace Mobile_Warehouse {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this.columnНомер_карточки = new global::System.Data.DataColumn("Номер карточки", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНомер_карточки);
                 this.columnФИО = new global::System.Data.DataColumn("ФИО", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnФИО);
-                this.columnПол = new global::System.Data.DataColumn("Пол", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnПол);
-                this.columnДолжность = new global::System.Data.DataColumn("Должность", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnДолжность);
-                this.columnРуководитель = new global::System.Data.DataColumn("Руководитель", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnРуководитель);
-                this.columnРаботающий = new global::System.Data.DataColumn("Работающий", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnРаботающий);
-                this.columnТабельный_номер = new global::System.Data.DataColumn("Табельный_номер", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnТабельный_номер);
-                this.columnБренд = new global::System.Data.DataColumn("Бренд", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnНаименование = new global::System.Data.DataColumn("Наименование", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНаименование);
+                this.columnАдрес = new global::System.Data.DataColumn("Адрес", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnАдрес);
+                this.columnТелефон = new global::System.Data.DataColumn("Телефон", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnТелефон);
+                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail);
+                this.columnИНН = new global::System.Data.DataColumn("ИНН", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnИНН);
+                this.columnКПП = new global::System.Data.DataColumn("КПП", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnКПП);
+                this.columnОКПО = new global::System.Data.DataColumn("ОКПО", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОКПО);
+                this.columnБанковские_реквизиты = new global::System.Data.DataColumn("Банковские реквизиты", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnБанковские_реквизиты);
+                this.columnБренд = new global::System.Data.DataColumn("Бренд", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnБренд);
+                this.columnТип_товара = new global::System.Data.DataColumn("Тип товара", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnТип_товара);
+                this.columnОбщая_сумма_закупок = new global::System.Data.DataColumn("Общая сумма закупок", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОбщая_сумма_закупок);
+                this.columnОбщая_сумма_возвратов = new global::System.Data.DataColumn("Общая сумма возвратов", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОбщая_сумма_возвратов);
+                this._columnСумма__закупки_возвраты_ = new global::System.Data.DataColumn("Сумма (закупки-возвраты)", typeof(int), null, global::System.Data.MappingType.Element);
+                this._columnСумма__закупки_возвраты_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnСумма__закупки_возвраты_");
+                this._columnСумма__закупки_возвраты_.ExtendedProperties.Add("Generator_UserColumnName", "Сумма (закупки-возвраты)");
+                base.Columns.Add(this._columnСумма__закупки_возвраты_);
+                this.columnДепозит = new global::System.Data.DataColumn("Депозит", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnДепозит);
+                this.columnДолг_перед_поставщиком = new global::System.Data.DataColumn("Долг перед поставщиком", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnДолг_перед_поставщиком);
                 this.columnДата_поступления_товара = new global::System.Data.DataColumn("Дата поступления товара", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnДата_поступления_товара);
                 this.columnРеальная_дата_привоза = new global::System.Data.DataColumn("Реальная дата привоза", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnРеальная_дата_привоза);
                 this.columnПросрочка = new global::System.Data.DataColumn("Просрочка", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnПросрочка);
+                this.columnПримечание = new global::System.Data.DataColumn("Примечание", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnПримечание);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -7057,9 +7329,13 @@ namespace Mobile_Warehouse {
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnФИО.MaxLength = 255;
-                this.columnПол.MaxLength = 255;
-                this.columnДолжность.MaxLength = 255;
-                this.columnРуководитель.MaxLength = 255;
+                this.columnНаименование.MaxLength = 255;
+                this.columnАдрес.MaxLength = 255;
+                this.columnEmail.MaxLength = 536870910;
+                this.columnБанковские_реквизиты.MaxLength = 255;
+                this.columnБренд.MaxLength = 255;
+                this.columnТип_товара.MaxLength = 255;
+                this.columnПримечание.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7213,86 +7489,30 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Тип_принадлежности {
+            public string Наименование {
                 get {
                     try {
-                        return ((int)(this[this.tableБренды.Тип_принадлежностиColumn]));
+                        return ((string)(this[this.tableБренды.НаименованиеColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Тип принадлежности\' в таблице \'Бренды\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Наименование\' в таблице \'Бренды\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableБренды.Тип_принадлежностиColumn] = value;
+                    this[this.tableБренды.НаименованиеColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Вид_бренда {
-                get {
-                    try {
-                        return ((int)(this[this.tableБренды.Вид_брендаColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Вид бренда\' в таблице \'Бренды\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableБренды.Вид_брендаColumn] = value;
-                }
+            public bool IsНаименованиеNull() {
+                return this.IsNull(this.tableБренды.НаименованиеColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Значение_бренда {
-                get {
-                    try {
-                        return ((string)(this[this.tableБренды.Значение_брендаColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Значение бренда\' в таблице \'Бренды\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableБренды.Значение_брендаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsТип_принадлежностиNull() {
-                return this.IsNull(this.tableБренды.Тип_принадлежностиColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetТип_принадлежностиNull() {
-                this[this.tableБренды.Тип_принадлежностиColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsВид_брендаNull() {
-                return this.IsNull(this.tableБренды.Вид_брендаColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetВид_брендаNull() {
-                this[this.tableБренды.Вид_брендаColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsЗначение_брендаNull() {
-                return this.IsNull(this.tableБренды.Значение_брендаColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetЗначение_брендаNull() {
-                this[this.tableБренды.Значение_брендаColumn] = global::System.Convert.DBNull;
+            public void SetНаименованиеNull() {
+                this[this.tableБренды.НаименованиеColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -8829,22 +9049,6 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Номер_карточки {
-                get {
-                    try {
-                        return ((int)(this[this.tableПоставщики.Номер_карточкиColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Номер карточки\' в таблице \'Поставщики\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableПоставщики.Номер_карточкиColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string ФИО {
                 get {
                     try {
@@ -8861,90 +9065,138 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Пол {
+            public string Наименование {
                 get {
                     try {
-                        return ((string)(this[this.tableПоставщики.ПолColumn]));
+                        return ((string)(this[this.tableПоставщики.НаименованиеColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Пол\' в таблице \'Поставщики\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Наименование\' в таблице \'Поставщики\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableПоставщики.ПолColumn] = value;
+                    this[this.tableПоставщики.НаименованиеColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Должность {
+            public string Адрес {
                 get {
                     try {
-                        return ((string)(this[this.tableПоставщики.ДолжностьColumn]));
+                        return ((string)(this[this.tableПоставщики.АдресColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Должность\' в таблице \'Поставщики\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Адрес\' в таблице \'Поставщики\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableПоставщики.ДолжностьColumn] = value;
+                    this[this.tableПоставщики.АдресColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Руководитель {
+            public int Телефон {
                 get {
                     try {
-                        return ((string)(this[this.tableПоставщики.РуководительColumn]));
+                        return ((int)(this[this.tableПоставщики.ТелефонColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Руководитель\' в таблице \'Поставщики\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Телефон\' в таблице \'Поставщики\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableПоставщики.РуководительColumn] = value;
+                    this[this.tableПоставщики.ТелефонColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Работающий {
+            public string Email {
                 get {
                     try {
-                        return ((bool)(this[this.tableПоставщики.РаботающийColumn]));
+                        return ((string)(this[this.tableПоставщики.EmailColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Работающий\' в таблице \'Поставщики\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Email\' в таблице \'Поставщики\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableПоставщики.РаботающийColumn] = value;
+                    this[this.tableПоставщики.EmailColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Табельный_номер {
+            public int ИНН {
                 get {
                     try {
-                        return ((int)(this[this.tableПоставщики.Табельный_номерColumn]));
+                        return ((int)(this[this.tableПоставщики.ИННColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Табельный_номер\' в таблице \'Поставщики\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'ИНН\' в таблице \'Поставщики\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableПоставщики.Табельный_номерColumn] = value;
+                    this[this.tableПоставщики.ИННColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Бренд {
+            public int КПП {
                 get {
                     try {
-                        return ((int)(this[this.tableПоставщики.БрендColumn]));
+                        return ((int)(this[this.tableПоставщики.КППColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'КПП\' в таблице \'Поставщики\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщики.КППColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int ОКПО {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщики.ОКПОColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'ОКПО\' в таблице \'Поставщики\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщики.ОКПОColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Банковские_реквизиты {
+                get {
+                    try {
+                        return ((string)(this[this.tableПоставщики.Банковские_реквизитыColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Банковские реквизиты\' в таблице \'Поставщики\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщики.Банковские_реквизитыColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Бренд {
+                get {
+                    try {
+                        return ((string)(this[this.tableПоставщики.БрендColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Бренд\' в таблице \'Поставщики\' равно DBNull.", e);
@@ -8952,6 +9204,105 @@ namespace Mobile_Warehouse {
                 }
                 set {
                     this[this.tableПоставщики.БрендColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Тип_товара {
+                get {
+                    try {
+                        return ((string)(this[this.tableПоставщики.Тип_товараColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Тип товара\' в таблице \'Поставщики\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщики.Тип_товараColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Общая_сумма_закупок {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщики.Общая_сумма_закупокColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Общая сумма закупок\' в таблице \'Поставщики\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщики.Общая_сумма_закупокColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Общая_сумма_возвратов {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщики.Общая_сумма_возвратовColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Общая сумма возвратов\' в таблице \'Поставщики\' равно DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщики.Общая_сумма_возвратовColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int _Сумма__закупки_возвраты_ {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщики._Сумма__закупки_возвраты_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Сумма (закупки-возвраты)\' в таблице \'Поставщики\' равно DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщики._Сумма__закупки_возвраты_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Депозит {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщики.ДепозитColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Депозит\' в таблице \'Поставщики\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщики.ДепозитColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Долг_перед_поставщиком {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщики.Долг_перед_поставщикомColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Долг перед поставщиком\' в таблице \'Поставщики\' равно DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщики.Долг_перед_поставщикомColumn] = value;
                 }
             }
             
@@ -9007,14 +9358,18 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsНомер_карточкиNull() {
-                return this.IsNull(this.tableПоставщики.Номер_карточкиColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetНомер_карточкиNull() {
-                this[this.tableПоставщики.Номер_карточкиColumn] = global::System.Convert.DBNull;
+            public string Примечание {
+                get {
+                    try {
+                        return ((string)(this[this.tableПоставщики.ПримечаниеColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Примечание\' в таблице \'Поставщики\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщики.ПримечаниеColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9031,62 +9386,98 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsПолNull() {
-                return this.IsNull(this.tableПоставщики.ПолColumn);
+            public bool IsНаименованиеNull() {
+                return this.IsNull(this.tableПоставщики.НаименованиеColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetПолNull() {
-                this[this.tableПоставщики.ПолColumn] = global::System.Convert.DBNull;
+            public void SetНаименованиеNull() {
+                this[this.tableПоставщики.НаименованиеColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsДолжностьNull() {
-                return this.IsNull(this.tableПоставщики.ДолжностьColumn);
+            public bool IsАдресNull() {
+                return this.IsNull(this.tableПоставщики.АдресColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetДолжностьNull() {
-                this[this.tableПоставщики.ДолжностьColumn] = global::System.Convert.DBNull;
+            public void SetАдресNull() {
+                this[this.tableПоставщики.АдресColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsРуководительNull() {
-                return this.IsNull(this.tableПоставщики.РуководительColumn);
+            public bool IsТелефонNull() {
+                return this.IsNull(this.tableПоставщики.ТелефонColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetРуководительNull() {
-                this[this.tableПоставщики.РуководительColumn] = global::System.Convert.DBNull;
+            public void SetТелефонNull() {
+                this[this.tableПоставщики.ТелефонColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsРаботающийNull() {
-                return this.IsNull(this.tableПоставщики.РаботающийColumn);
+            public bool IsEmailNull() {
+                return this.IsNull(this.tableПоставщики.EmailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetРаботающийNull() {
-                this[this.tableПоставщики.РаботающийColumn] = global::System.Convert.DBNull;
+            public void SetEmailNull() {
+                this[this.tableПоставщики.EmailColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsТабельный_номерNull() {
-                return this.IsNull(this.tableПоставщики.Табельный_номерColumn);
+            public bool IsИННNull() {
+                return this.IsNull(this.tableПоставщики.ИННColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetТабельный_номерNull() {
-                this[this.tableПоставщики.Табельный_номерColumn] = global::System.Convert.DBNull;
+            public void SetИННNull() {
+                this[this.tableПоставщики.ИННColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsКППNull() {
+                return this.IsNull(this.tableПоставщики.КППColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetКППNull() {
+                this[this.tableПоставщики.КППColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsОКПОNull() {
+                return this.IsNull(this.tableПоставщики.ОКПОColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetОКПОNull() {
+                this[this.tableПоставщики.ОКПОColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsБанковские_реквизитыNull() {
+                return this.IsNull(this.tableПоставщики.Банковские_реквизитыColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetБанковские_реквизитыNull() {
+                this[this.tableПоставщики.Банковские_реквизитыColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9099,6 +9490,78 @@ namespace Mobile_Warehouse {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetБрендNull() {
                 this[this.tableПоставщики.БрендColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsТип_товараNull() {
+                return this.IsNull(this.tableПоставщики.Тип_товараColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetТип_товараNull() {
+                this[this.tableПоставщики.Тип_товараColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsОбщая_сумма_закупокNull() {
+                return this.IsNull(this.tableПоставщики.Общая_сумма_закупокColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetОбщая_сумма_закупокNull() {
+                this[this.tableПоставщики.Общая_сумма_закупокColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsОбщая_сумма_возвратовNull() {
+                return this.IsNull(this.tableПоставщики.Общая_сумма_возвратовColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetОбщая_сумма_возвратовNull() {
+                this[this.tableПоставщики.Общая_сумма_возвратовColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Is_Сумма__закупки_возвраты_Null() {
+                return this.IsNull(this.tableПоставщики._Сумма__закупки_возвраты_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Set_Сумма__закупки_возвраты_Null() {
+                this[this.tableПоставщики._Сумма__закупки_возвраты_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsДепозитNull() {
+                return this.IsNull(this.tableПоставщики.ДепозитColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetДепозитNull() {
+                this[this.tableПоставщики.ДепозитColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsДолг_перед_поставщикомNull() {
+                return this.IsNull(this.tableПоставщики.Долг_перед_поставщикомColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetДолг_перед_поставщикомNull() {
+                this[this.tableПоставщики.Долг_перед_поставщикомColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9135,6 +9598,18 @@ namespace Mobile_Warehouse {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetПросрочкаNull() {
                 this[this.tableПоставщики.ПросрочкаColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsПримечаниеNull() {
+                return this.IsNull(this.tableПоставщики.ПримечаниеColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetПримечаниеNull() {
+                this[this.tableПоставщики.ПримечаниеColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9993,22 +10468,6 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Номер_карточки {
-                get {
-                    try {
-                        return ((int)(this[this.tableПоставщикиЗапрос.Номер_карточкиColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Номер карточки\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableПоставщикиЗапрос.Номер_карточкиColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string ФИО {
                 get {
                     try {
@@ -10025,91 +10484,139 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Пол {
+            public string Наименование {
                 get {
                     try {
-                        return ((string)(this[this.tableПоставщикиЗапрос.ПолColumn]));
+                        return ((string)(this[this.tableПоставщикиЗапрос.НаименованиеColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Пол\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Наименование\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableПоставщикиЗапрос.ПолColumn] = value;
+                    this[this.tableПоставщикиЗапрос.НаименованиеColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Должность {
+            public string Адрес {
                 get {
                     try {
-                        return ((string)(this[this.tableПоставщикиЗапрос.ДолжностьColumn]));
+                        return ((string)(this[this.tableПоставщикиЗапрос.АдресColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Должность\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Адрес\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableПоставщикиЗапрос.ДолжностьColumn] = value;
+                    this[this.tableПоставщикиЗапрос.АдресColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Руководитель {
+            public int Телефон {
                 get {
                     try {
-                        return ((string)(this[this.tableПоставщикиЗапрос.РуководительColumn]));
+                        return ((int)(this[this.tableПоставщикиЗапрос.ТелефонColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Руководитель\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Телефон\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableПоставщикиЗапрос.РуководительColumn] = value;
+                    this[this.tableПоставщикиЗапрос.ТелефонColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Работающий {
+            public string Email {
                 get {
                     try {
-                        return ((bool)(this[this.tableПоставщикиЗапрос.РаботающийColumn]));
+                        return ((string)(this[this.tableПоставщикиЗапрос.EmailColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Работающий\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Email\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableПоставщикиЗапрос.РаботающийColumn] = value;
+                    this[this.tableПоставщикиЗапрос.EmailColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Табельный_номер {
+            public int ИНН {
                 get {
                     try {
-                        return ((int)(this[this.tableПоставщикиЗапрос.Табельный_номерColumn]));
+                        return ((int)(this[this.tableПоставщикиЗапрос.ИННColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Табельный_номер\' в таблице \'ПоставщикиЗапрос\' равно DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'ИНН\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableПоставщикиЗапрос.Табельный_номерColumn] = value;
+                    this[this.tableПоставщикиЗапрос.ИННColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Бренд {
+            public int КПП {
                 get {
                     try {
-                        return ((int)(this[this.tableПоставщикиЗапрос.БрендColumn]));
+                        return ((int)(this[this.tableПоставщикиЗапрос.КППColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'КПП\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщикиЗапрос.КППColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int ОКПО {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщикиЗапрос.ОКПОColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'ОКПО\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщикиЗапрос.ОКПОColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Банковские_реквизиты {
+                get {
+                    try {
+                        return ((string)(this[this.tableПоставщикиЗапрос.Банковские_реквизитыColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Банковские реквизиты\' в таблице \'ПоставщикиЗапрос\' равно DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщикиЗапрос.Банковские_реквизитыColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Бренд {
+                get {
+                    try {
+                        return ((string)(this[this.tableПоставщикиЗапрос.БрендColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Бренд\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
@@ -10117,6 +10624,106 @@ namespace Mobile_Warehouse {
                 }
                 set {
                     this[this.tableПоставщикиЗапрос.БрендColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Тип_товара {
+                get {
+                    try {
+                        return ((string)(this[this.tableПоставщикиЗапрос.Тип_товараColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Тип товара\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщикиЗапрос.Тип_товараColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Общая_сумма_закупок {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщикиЗапрос.Общая_сумма_закупокColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Общая сумма закупок\' в таблице \'ПоставщикиЗапрос\' равно DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщикиЗапрос.Общая_сумма_закупокColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Общая_сумма_возвратов {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщикиЗапрос.Общая_сумма_возвратовColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Общая сумма возвратов\' в таблице \'ПоставщикиЗапрос\' равно D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщикиЗапрос.Общая_сумма_возвратовColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int _Сумма__закупки_возвраты_ {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщикиЗапрос._Сумма__закупки_возвраты_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Сумма (закупки-возвраты)\' в таблице \'ПоставщикиЗапрос\' равн" +
+                                "о DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщикиЗапрос._Сумма__закупки_возвраты_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Депозит {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщикиЗапрос.ДепозитColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Депозит\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщикиЗапрос.ДепозитColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Долг_перед_поставщиком {
+                get {
+                    try {
+                        return ((int)(this[this.tableПоставщикиЗапрос.Долг_перед_поставщикомColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Долг перед поставщиком\' в таблице \'ПоставщикиЗапрос\' равно " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщикиЗапрос.Долг_перед_поставщикомColumn] = value;
                 }
             }
             
@@ -10172,14 +10779,18 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsНомер_карточкиNull() {
-                return this.IsNull(this.tableПоставщикиЗапрос.Номер_карточкиColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetНомер_карточкиNull() {
-                this[this.tableПоставщикиЗапрос.Номер_карточкиColumn] = global::System.Convert.DBNull;
+            public string Примечание {
+                get {
+                    try {
+                        return ((string)(this[this.tableПоставщикиЗапрос.ПримечаниеColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Примечание\' в таблице \'ПоставщикиЗапрос\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПоставщикиЗапрос.ПримечаниеColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10196,62 +10807,98 @@ namespace Mobile_Warehouse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsПолNull() {
-                return this.IsNull(this.tableПоставщикиЗапрос.ПолColumn);
+            public bool IsНаименованиеNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.НаименованиеColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetПолNull() {
-                this[this.tableПоставщикиЗапрос.ПолColumn] = global::System.Convert.DBNull;
+            public void SetНаименованиеNull() {
+                this[this.tableПоставщикиЗапрос.НаименованиеColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsДолжностьNull() {
-                return this.IsNull(this.tableПоставщикиЗапрос.ДолжностьColumn);
+            public bool IsАдресNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.АдресColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetДолжностьNull() {
-                this[this.tableПоставщикиЗапрос.ДолжностьColumn] = global::System.Convert.DBNull;
+            public void SetАдресNull() {
+                this[this.tableПоставщикиЗапрос.АдресColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsРуководительNull() {
-                return this.IsNull(this.tableПоставщикиЗапрос.РуководительColumn);
+            public bool IsТелефонNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.ТелефонColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetРуководительNull() {
-                this[this.tableПоставщикиЗапрос.РуководительColumn] = global::System.Convert.DBNull;
+            public void SetТелефонNull() {
+                this[this.tableПоставщикиЗапрос.ТелефонColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsРаботающийNull() {
-                return this.IsNull(this.tableПоставщикиЗапрос.РаботающийColumn);
+            public bool IsEmailNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.EmailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetРаботающийNull() {
-                this[this.tableПоставщикиЗапрос.РаботающийColumn] = global::System.Convert.DBNull;
+            public void SetEmailNull() {
+                this[this.tableПоставщикиЗапрос.EmailColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsТабельный_номерNull() {
-                return this.IsNull(this.tableПоставщикиЗапрос.Табельный_номерColumn);
+            public bool IsИННNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.ИННColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetТабельный_номерNull() {
-                this[this.tableПоставщикиЗапрос.Табельный_номерColumn] = global::System.Convert.DBNull;
+            public void SetИННNull() {
+                this[this.tableПоставщикиЗапрос.ИННColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsКППNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.КППColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetКППNull() {
+                this[this.tableПоставщикиЗапрос.КППColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsОКПОNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.ОКПОColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetОКПОNull() {
+                this[this.tableПоставщикиЗапрос.ОКПОColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsБанковские_реквизитыNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.Банковские_реквизитыColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetБанковские_реквизитыNull() {
+                this[this.tableПоставщикиЗапрос.Банковские_реквизитыColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10264,6 +10911,78 @@ namespace Mobile_Warehouse {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetБрендNull() {
                 this[this.tableПоставщикиЗапрос.БрендColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsТип_товараNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.Тип_товараColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetТип_товараNull() {
+                this[this.tableПоставщикиЗапрос.Тип_товараColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsОбщая_сумма_закупокNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.Общая_сумма_закупокColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetОбщая_сумма_закупокNull() {
+                this[this.tableПоставщикиЗапрос.Общая_сумма_закупокColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsОбщая_сумма_возвратовNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.Общая_сумма_возвратовColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetОбщая_сумма_возвратовNull() {
+                this[this.tableПоставщикиЗапрос.Общая_сумма_возвратовColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Is_Сумма__закупки_возвраты_Null() {
+                return this.IsNull(this.tableПоставщикиЗапрос._Сумма__закупки_возвраты_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Set_Сумма__закупки_возвраты_Null() {
+                this[this.tableПоставщикиЗапрос._Сумма__закупки_возвраты_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsДепозитNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.ДепозитColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetДепозитNull() {
+                this[this.tableПоставщикиЗапрос.ДепозитColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsДолг_перед_поставщикомNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.Долг_перед_поставщикомColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetДолг_перед_поставщикомNull() {
+                this[this.tableПоставщикиЗапрос.Долг_перед_поставщикомColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10300,6 +11019,18 @@ namespace Mobile_Warehouse {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetПросрочкаNull() {
                 this[this.tableПоставщикиЗапрос.ПросрочкаColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsПримечаниеNull() {
+                return this.IsNull(this.tableПоставщикиЗапрос.ПримечаниеColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetПримечаниеNull() {
+                this[this.tableПоставщикиЗапрос.ПримечаниеColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11097,46 +11828,30 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Бренды";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Тип принадлежности", "Тип принадлежности");
-            tableMapping.ColumnMappings.Add("Вид бренда", "Вид бренда");
-            tableMapping.ColumnMappings.Add("Значение бренда", "Значение бренда");
+            tableMapping.ColumnMappings.Add("Наименование", "Наименование");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Бренды` WHERE ((`Id` = ?) AND ((? = 1 AND `Тип принадлежности` IS NU" +
-                "LL) OR (`Тип принадлежности` = ?)) AND ((? = 1 AND `Вид бренда` IS NULL) OR (`Ви" +
-                "д бренда` = ?)) AND ((? = 1 AND `Значение бренда` IS NULL) OR (`Значение бренда`" +
-                " = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Бренды` WHERE ((`Id` = ?) AND ((? = 1 AND `Наименование` IS NULL) OR" +
+                " (`Наименование` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Тип_принадлежности", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип принадлежности", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Тип_принадлежности", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип принадлежности", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Вид_бренда", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Вид бренда", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Вид_бренда", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Вид бренда", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Значение_бренда", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Значение бренда", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Значение_бренда", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Значение бренда", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Наименование", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Бренды` (`Тип принадлежности`, `Вид бренда`, `Значение бренда`) VALU" +
-                "ES (?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Бренды` (`Наименование`) VALUES (?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Тип_принадлежности", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип принадлежности", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Вид_бренда", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Вид бренда", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Значение_бренда", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Значение бренда", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Бренды` SET `Тип принадлежности` = ?, `Вид бренда` = ?, `Значение бренда` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `Тип принадлежности` IS NULL) OR (`Тип принадлежности` = ?)) AND ((? = 1 AND `Вид бренда` IS NULL) OR (`Вид бренда` = ?)) AND ((? = 1 AND `Значение бренда` IS NULL) OR (`Значение бренда` = ?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `Бренды` SET `Наименование` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `Наимено" +
+                "вание` IS NULL) OR (`Наименование` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Тип_принадлежности", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип принадлежности", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Вид_бренда", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Вид бренда", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Значение_бренда", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Значение бренда", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Тип_принадлежности", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип принадлежности", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Тип_принадлежности", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип принадлежности", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Вид_бренда", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Вид бренда", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Вид_бренда", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Вид бренда", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Значение_бренда", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Значение бренда", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Значение_бренда", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Значение бренда", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Наименование", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11152,7 +11867,7 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, [Тип принадлежности], [Вид бренда], [Значение бренда] FROM Бренды";
+            this._commandCollection[0].CommandText = "SELECT Id, Наименование FROM Бренды";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11213,31 +11928,15 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, global::System.Nullable<int> Original_Тип_принадлежности, global::System.Nullable<int> Original_Вид_бренда, string Original_Значение_бренда) {
+        public virtual int Delete(int Original_Id, string Original_Наименование) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_Тип_принадлежности.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Тип_принадлежности.Value));
-            }
-            else {
+            if ((Original_Наименование == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_Вид_бренда.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Вид_бренда.Value));
-            }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Значение_бренда == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Значение_бренда));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Наименование));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11259,24 +11958,12 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> Тип_принадлежности, global::System.Nullable<int> Вид_бренда, string Значение_бренда) {
-            if ((Тип_принадлежности.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Тип_принадлежности.Value));
-            }
-            else {
+        public virtual int Insert(string Наименование) {
+            if ((Наименование == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Вид_бренда.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Вид_бренда.Value));
-            }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Значение_бренда == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Значение_бренда));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Наименование));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11298,49 +11985,21 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Тип_принадлежности, global::System.Nullable<int> Вид_бренда, string Значение_бренда, int Original_Id, global::System.Nullable<int> Original_Тип_принадлежности, global::System.Nullable<int> Original_Вид_бренда, string Original_Значение_бренда) {
-            if ((Тип_принадлежности.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Тип_принадлежности.Value));
-            }
-            else {
+        public virtual int Update(string Наименование, int Original_Id, string Original_Наименование) {
+            if ((Наименование == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Вид_бренда.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Вид_бренда.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Наименование));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id));
+            if ((Original_Наименование == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Значение_бренда == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Значение_бренда));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
-            if ((Original_Тип_принадлежности.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Тип_принадлежности.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Вид_бренда.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Вид_бренда.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Значение_бренда == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Значение_бренда));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Наименование));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -15804,100 +16463,177 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Поставщики";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Номер карточки", "Номер карточки");
             tableMapping.ColumnMappings.Add("ФИО", "ФИО");
-            tableMapping.ColumnMappings.Add("Пол", "Пол");
-            tableMapping.ColumnMappings.Add("Должность", "Должность");
-            tableMapping.ColumnMappings.Add("Руководитель", "Руководитель");
-            tableMapping.ColumnMappings.Add("Работающий", "Работающий");
-            tableMapping.ColumnMappings.Add("Табельный_номер", "Табельный_номер");
+            tableMapping.ColumnMappings.Add("Наименование", "Наименование");
+            tableMapping.ColumnMappings.Add("Адрес", "Адрес");
+            tableMapping.ColumnMappings.Add("Телефон", "Телефон");
+            tableMapping.ColumnMappings.Add("Email", "Email");
+            tableMapping.ColumnMappings.Add("ИНН", "ИНН");
+            tableMapping.ColumnMappings.Add("КПП", "КПП");
+            tableMapping.ColumnMappings.Add("ОКПО", "ОКПО");
+            tableMapping.ColumnMappings.Add("Банковские реквизиты", "Банковские реквизиты");
             tableMapping.ColumnMappings.Add("Бренд", "Бренд");
+            tableMapping.ColumnMappings.Add("Тип товара", "Тип товара");
+            tableMapping.ColumnMappings.Add("Общая сумма закупок", "Общая сумма закупок");
+            tableMapping.ColumnMappings.Add("Общая сумма возвратов", "Общая сумма возвратов");
+            tableMapping.ColumnMappings.Add("Сумма (закупки-возвраты)", "Сумма (закупки-возвраты)");
+            tableMapping.ColumnMappings.Add("Депозит", "Депозит");
+            tableMapping.ColumnMappings.Add("Долг перед поставщиком", "Долг перед поставщиком");
             tableMapping.ColumnMappings.Add("Дата поступления товара", "Дата поступления товара");
             tableMapping.ColumnMappings.Add("Реальная дата привоза", "Реальная дата привоза");
             tableMapping.ColumnMappings.Add("Просрочка", "Просрочка");
+            tableMapping.ColumnMappings.Add("Примечание", "Примечание");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Поставщики` WHERE ((`Id` = ?) AND ((? = 1 AND `Номер карточки` IS NULL) OR (`Номер карточки` = ?)) AND ((? = 1 AND `ФИО` IS NULL) OR (`ФИО` = ?)) AND ((? = 1 AND `Пол` IS NULL) OR (`Пол` = ?)) AND ((? = 1 AND `Должность` IS NULL) OR (`Должность` = ?)) AND ((? = 1 AND `Руководитель` IS NULL) OR (`Руководитель` = ?)) AND ((? = 1 AND `Работающий` IS NULL) OR (`Работающий` = ?)) AND ((? = 1 AND `Табельный_номер` IS NULL) OR (`Табельный_номер` = ?)) AND ((? = 1 AND `Бренд` IS NULL) OR (`Бренд` = ?)) AND ((? = 1 AND `Дата поступления товара` IS NULL) OR (`Дата поступления товара` = ?)) AND ((? = 1 AND `Реальная дата привоза` IS NULL) OR (`Реальная дата привоза` = ?)) AND ((? = 1 AND `Просрочка` IS NULL) OR (`Просрочка` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Поставщики` WHERE ((`Id` = ?) AND ((? = 1 AND `ФИО` IS NULL) OR (`ФИО` = ?)) AND ((? = 1 AND `Наименование` IS NULL) OR (`Наименование` = ?)) AND ((? = 1 AND `Адрес` IS NULL) OR (`Адрес` = ?)) AND ((? = 1 AND `Телефон` IS NULL) OR (`Телефон` = ?)) AND ((? = 1 AND `ИНН` IS NULL) OR (`ИНН` = ?)) AND ((? = 1 AND `КПП` IS NULL) OR (`КПП` = ?)) AND ((? = 1 AND `ОКПО` IS NULL) OR (`ОКПО` = ?)) AND ((? = 1 AND `Банковские реквизиты` IS NULL) OR (`Банковские реквизиты` = ?)) AND ((? = 1 AND `Бренд` IS NULL) OR (`Бренд` = ?)) AND ((? = 1 AND `Тип товара` IS NULL) OR (`Тип товара` = ?)) AND ((? = 1 AND `Общая сумма закупок` IS NULL) OR (`Общая сумма закупок` = ?)) AND ((? = 1 AND `Общая сумма возвратов` IS NULL) OR (`Общая сумма возвратов` = ?)) AND ((? = 1 AND `Сумма (закупки-возвраты)` IS NULL) OR (`Сумма (закупки-возвраты)` = ?)) AND ((? = 1 AND `Депозит` IS NULL) OR (`Депозит` = ?)) AND ((? = 1 AND `Долг перед поставщиком` IS NULL) OR (`Долг перед поставщиком` = ?)) AND ((? = 1 AND `Дата поступления товара` IS NULL) OR (`Дата поступления товара` = ?)) AND ((? = 1 AND `Реальная дата привоза` IS NULL) OR (`Реальная дата привоза` = ?)) AND ((? = 1 AND `Просрочка` IS NULL) OR (`Просрочка` = ?)) AND ((? = 1 AND `Примечание` IS NULL) OR (`Примечание` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ФИО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ФИО", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Пол", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Пол", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Должность", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Должность", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Руководитель", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Руководитель", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Работающий", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Работающий", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Наименование", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Адрес", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Адрес", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Банковские_реквизиты", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Банковские_реквизиты", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Бренд", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Тип_товара", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Тип_товара", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Просрочка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Просрочка", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Примечание", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Примечание", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Поставщики` (`Номер карточки`, `ФИО`, `Пол`, `Должность`, `Руководит" +
-                "ель`, `Работающий`, `Табельный_номер`, `Бренд`, `Дата поступления товара`, `Реал" +
-                "ьная дата привоза`, `Просрочка`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Поставщики` (`ФИО`, `Наименование`, `Адрес`, `Телефон`, `Email`, `ИНН`, `КПП`, `ОКПО`, `Банковские реквизиты`, `Бренд`, `Тип товара`, `Общая сумма закупок`, `Общая сумма возвратов`, `Сумма (закупки-возвраты)`, `Депозит`, `Долг перед поставщиком`, `Дата поступления товара`, `Реальная дата привоза`, `Просрочка`, `Примечание`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ФИО", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Пол", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Должность", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Руководитель", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Работающий", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Адрес", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Банковские_реквизиты", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Бренд", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Тип_товара", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Просрочка", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Примечание", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Поставщики` SET `Номер карточки` = ?, `ФИО` = ?, `Пол` = ?, `Должность` = ?, `Руководитель` = ?, `Работающий` = ?, `Табельный_номер` = ?, `Бренд` = ?, `Дата поступления товара` = ?, `Реальная дата привоза` = ?, `Просрочка` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `Номер карточки` IS NULL) OR (`Номер карточки` = ?)) AND ((? = 1 AND `ФИО` IS NULL) OR (`ФИО` = ?)) AND ((? = 1 AND `Пол` IS NULL) OR (`Пол` = ?)) AND ((? = 1 AND `Должность` IS NULL) OR (`Должность` = ?)) AND ((? = 1 AND `Руководитель` IS NULL) OR (`Руководитель` = ?)) AND ((? = 1 AND `Работающий` IS NULL) OR (`Работающий` = ?)) AND ((? = 1 AND `Табельный_номер` IS NULL) OR (`Табельный_номер` = ?)) AND ((? = 1 AND `Бренд` IS NULL) OR (`Бренд` = ?)) AND ((? = 1 AND `Дата поступления товара` IS NULL) OR (`Дата поступления товара` = ?)) AND ((? = 1 AND `Реальная дата привоза` IS NULL) OR (`Реальная дата привоза` = ?)) AND ((? = 1 AND `Просрочка` IS NULL) OR (`Просрочка` = ?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `Поставщики` SET `ФИО` = ?, `Наименование` = ?, `Адрес` = ?, `Телефон` = ?" +
+                ", `Email` = ?, `ИНН` = ?, `КПП` = ?, `ОКПО` = ?, `Банковские реквизиты` = ?, `Бр" +
+                "енд` = ?, `Тип товара` = ?, `Общая сумма закупок` = ?, `Общая сумма возвратов` =" +
+                " ?, `Сумма (закупки-возвраты)` = ?, `Депозит` = ?, `Долг перед поставщиком` = ?," +
+                " `Дата поступления товара` = ?, `Реальная дата привоза` = ?, `Просрочка` = ?, `П" +
+                "римечание` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `ФИО` IS NULL) OR (`ФИО` = ?)) " +
+                "AND ((? = 1 AND `Наименование` IS NULL) OR (`Наименование` = ?)) AND ((? = 1 AND" +
+                " `Адрес` IS NULL) OR (`Адрес` = ?)) AND ((? = 1 AND `Телефон` IS NULL) OR (`Теле" +
+                "фон` = ?)) AND ((? = 1 AND `ИНН` IS NULL) OR (`ИНН` = ?)) AND ((? = 1 AND `КПП` " +
+                "IS NULL) OR (`КПП` = ?)) AND ((? = 1 AND `ОКПО` IS NULL) OR (`ОКПО` = ?)) AND ((" +
+                "? = 1 AND `Банковские реквизиты` IS NULL) OR (`Банковские реквизиты` = ?)) AND (" +
+                "(? = 1 AND `Бренд` IS NULL) OR (`Бренд` = ?)) AND ((? = 1 AND `Тип товара` IS NU" +
+                "LL) OR (`Тип товара` = ?)) AND ((? = 1 AND `Общая сумма закупок` IS NULL) OR (`О" +
+                "бщая сумма закупок` = ?)) AND ((? = 1 AND `Общая сумма возвратов` IS NULL) OR (`" +
+                "Общая сумма возвратов` = ?)) AND ((? = 1 AND `Сумма (закупки-возвраты)` IS NULL)" +
+                " OR (`Сумма (закупки-возвраты)` = ?)) AND ((? = 1 AND `Депозит` IS NULL) OR (`Де" +
+                "позит` = ?)) AND ((? = 1 AND `Долг перед поставщиком` IS NULL) OR (`Долг перед п" +
+                "оставщиком` = ?)) AND ((? = 1 AND `Дата поступления товара` IS NULL) OR (`Дата п" +
+                "оступления товара` = ?)) AND ((? = 1 AND `Реальная дата привоза` IS NULL) OR (`Р" +
+                "еальная дата привоза` = ?)) AND ((? = 1 AND `Просрочка` IS NULL) OR (`Просрочка`" +
+                " = ?)) AND ((? = 1 AND `Примечание` IS NULL) OR (`Примечание` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ФИО", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Пол", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Должность", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Руководитель", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Работающий", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Адрес", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Банковские_реквизиты", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Бренд", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Тип_товара", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Просрочка", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Примечание", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ФИО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ФИО", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Пол", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Пол", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Должность", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Должность", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Руководитель", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Руководитель", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Работающий", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Работающий", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Наименование", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Адрес", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Адрес", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Банковские_реквизиты", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Банковские_реквизиты", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Бренд", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Тип_товара", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Тип_товара", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Просрочка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Просрочка", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Примечание", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Примечание", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15913,9 +16649,7 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, [Номер карточки], ФИО, Пол, Должность, Руководитель, Работающий, [Табе" +
-                "льный_номер], Бренд, [Дата поступления товара], [Реальная дата привоза], Просроч" +
-                "ка FROM Поставщики";
+            this._commandCollection[0].CommandText = @"SELECT Id, ФИО, Наименование, Адрес, Телефон, Email, ИНН, КПП, ОКПО, [Банковские реквизиты], Бренд, [Тип товара], [Общая сумма закупок], [Общая сумма возвратов], [Сумма (закупки-возвраты)], Депозит, [Долг перед поставщиком], [Дата поступления товара], [Реальная дата привоза], Просрочка, Примечание FROM Поставщики";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15976,84 +16710,174 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, global::System.Nullable<int> Original_Номер_карточки, string Original_ФИО, string Original_Пол, string Original_Должность, string Original_Руководитель, bool Original_Работающий, global::System.Nullable<int> Original_Табельный_номер, global::System.Nullable<int> Original_Бренд, global::System.Nullable<global::System.DateTime> Original_Дата_поступления_товара, global::System.Nullable<global::System.DateTime> Original_Реальная_дата_привоза, bool Original_Просрочка) {
+        public virtual int Delete(
+                    int Original_Id, 
+                    string Original_ФИО, 
+                    string Original_Наименование, 
+                    string Original_Адрес, 
+                    global::System.Nullable<int> Original_Телефон, 
+                    global::System.Nullable<int> Original_ИНН, 
+                    global::System.Nullable<int> Original_КПП, 
+                    global::System.Nullable<int> Original_ОКПО, 
+                    string Original_Банковские_реквизиты, 
+                    string Original_Бренд, 
+                    string Original_Тип_товара, 
+                    global::System.Nullable<int> Original_Общая_сумма_закупок, 
+                    global::System.Nullable<int> Original_Общая_сумма_возвратов, 
+                    global::System.Nullable<int> _Original_Сумма__закупки_возвраты_, 
+                    global::System.Nullable<int> Original_Депозит, 
+                    global::System.Nullable<int> Original_Долг_перед_поставщиком, 
+                    global::System.Nullable<global::System.DateTime> Original_Дата_поступления_товара, 
+                    global::System.Nullable<global::System.DateTime> Original_Реальная_дата_привоза, 
+                    bool Original_Просрочка, 
+                    string Original_Примечание) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_Номер_карточки.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Номер_карточки.Value));
-            }
-            else {
+            if ((Original_ФИО == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_ФИО == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ФИО));
+            }
+            if ((Original_Наименование == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_ФИО));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Наименование));
             }
-            if ((Original_Пол == null)) {
+            if ((Original_Адрес == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Пол));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Адрес));
             }
-            if ((Original_Должность == null)) {
+            if ((Original_Телефон.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Телефон.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Должность));
+            if ((Original_ИНН.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_ИНН.Value));
             }
-            if ((Original_Руководитель == null)) {
+            else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Руководитель));
+            if ((Original_КПП.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_КПП.Value));
             }
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((bool)(Original_Работающий));
-            if ((Original_Табельный_номер.HasValue == true)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ОКПО.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_Табельный_номер.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_ОКПО.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_Бренд.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_Бренд.Value));
-            }
-            else {
+            if ((Original_Банковские_реквизиты == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_Дата_поступления_товара.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_Дата_поступления_товара.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_Банковские_реквизиты));
+            }
+            if ((Original_Бренд == null)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_Реальная_дата_привоза.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_Реальная_дата_привоза.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_Бренд));
+            }
+            if ((Original_Тип_товара == null)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[22].Value = ((bool)(Original_Просрочка));
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_Тип_товара));
+            }
+            if ((Original_Общая_сумма_закупок.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_Общая_сумма_закупок.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Общая_сумма_возвратов.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_Общая_сумма_возвратов.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((_Original_Сумма__закупки_возвраты_.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(_Original_Сумма__закупки_возвраты_.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Депозит.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_Депозит.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Долг_перед_поставщиком.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((int)(Original_Долг_перед_поставщиком.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Дата_поступления_товара.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((System.DateTime)(Original_Дата_поступления_товара.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Реальная_дата_привоза.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((System.DateTime)(Original_Реальная_дата_привоза.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[36].Value = ((bool)(Original_Просрочка));
+            if ((Original_Примечание == null)) {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((string)(Original_Примечание));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16074,63 +16898,142 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> Номер_карточки, string ФИО, string Пол, string Должность, string Руководитель, bool Работающий, global::System.Nullable<int> Табельный_номер, global::System.Nullable<int> Бренд, global::System.Nullable<global::System.DateTime> Дата_поступления_товара, global::System.Nullable<global::System.DateTime> Реальная_дата_привоза, bool Просрочка) {
-            if ((Номер_карточки.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Номер_карточки.Value));
-            }
-            else {
+        public virtual int Insert(
+                    string ФИО, 
+                    string Наименование, 
+                    string Адрес, 
+                    global::System.Nullable<int> Телефон, 
+                    string Email, 
+                    global::System.Nullable<int> ИНН, 
+                    global::System.Nullable<int> КПП, 
+                    global::System.Nullable<int> ОКПО, 
+                    string Банковские_реквизиты, 
+                    string Бренд, 
+                    string Тип_товара, 
+                    global::System.Nullable<int> Общая_сумма_закупок, 
+                    global::System.Nullable<int> Общая_сумма_возвратов, 
+                    global::System.Nullable<int> _Сумма__закупки_возвраты_, 
+                    global::System.Nullable<int> Депозит, 
+                    global::System.Nullable<int> Долг_перед_поставщиком, 
+                    global::System.Nullable<global::System.DateTime> Дата_поступления_товара, 
+                    global::System.Nullable<global::System.DateTime> Реальная_дата_привоза, 
+                    bool Просрочка, 
+                    string Примечание) {
+            if ((ФИО == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((ФИО == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ФИО));
+            }
+            if ((Наименование == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ФИО));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Наименование));
             }
-            if ((Пол == null)) {
+            if ((Адрес == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Пол));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Адрес));
             }
-            if ((Должность == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((Телефон.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Телефон.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Должность));
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Руководитель == null)) {
+            if ((Email == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Руководитель));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Email));
             }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(Работающий));
-            if ((Табельный_номер.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(Табельный_номер.Value));
+            if ((ИНН.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(ИНН.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((КПП.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(КПП.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Бренд.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Бренд.Value));
+            if ((ОКПО.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(ОКПО.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Дата_поступления_товара.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(Дата_поступления_товара.Value));
-            }
-            else {
+            if ((Банковские_реквизиты == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Реальная_дата_привоза.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(Реальная_дата_привоза.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Банковские_реквизиты));
+            }
+            if ((Бренд == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(Просрочка));
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Бренд));
+            }
+            if ((Тип_товара == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Тип_товара));
+            }
+            if ((Общая_сумма_закупок.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(Общая_сумма_закупок.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Общая_сумма_возвратов.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(Общая_сумма_возвратов.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((_Сумма__закупки_возвраты_.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(_Сумма__закупки_возвраты_.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Депозит.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(Депозит.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Долг_перед_поставщиком.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(Долг_перед_поставщиком.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Дата_поступления_товара.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((System.DateTime)(Дата_поступления_товара.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Реальная_дата_привоза.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((System.DateTime)(Реальная_дата_привоза.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[18].Value = ((bool)(Просрочка));
+            if ((Примечание == null)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(Примечание));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16152,162 +17055,308 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    global::System.Nullable<int> Номер_карточки, 
                     string ФИО, 
-                    string Пол, 
-                    string Должность, 
-                    string Руководитель, 
-                    bool Работающий, 
-                    global::System.Nullable<int> Табельный_номер, 
-                    global::System.Nullable<int> Бренд, 
+                    string Наименование, 
+                    string Адрес, 
+                    global::System.Nullable<int> Телефон, 
+                    string Email, 
+                    global::System.Nullable<int> ИНН, 
+                    global::System.Nullable<int> КПП, 
+                    global::System.Nullable<int> ОКПО, 
+                    string Банковские_реквизиты, 
+                    string Бренд, 
+                    string Тип_товара, 
+                    global::System.Nullable<int> Общая_сумма_закупок, 
+                    global::System.Nullable<int> Общая_сумма_возвратов, 
+                    global::System.Nullable<int> _Сумма__закупки_возвраты_, 
+                    global::System.Nullable<int> Депозит, 
+                    global::System.Nullable<int> Долг_перед_поставщиком, 
                     global::System.Nullable<global::System.DateTime> Дата_поступления_товара, 
                     global::System.Nullable<global::System.DateTime> Реальная_дата_привоза, 
                     bool Просрочка, 
+                    string Примечание, 
                     int Original_Id, 
-                    global::System.Nullable<int> Original_Номер_карточки, 
                     string Original_ФИО, 
-                    string Original_Пол, 
-                    string Original_Должность, 
-                    string Original_Руководитель, 
-                    bool Original_Работающий, 
-                    global::System.Nullable<int> Original_Табельный_номер, 
-                    global::System.Nullable<int> Original_Бренд, 
+                    string Original_Наименование, 
+                    string Original_Адрес, 
+                    global::System.Nullable<int> Original_Телефон, 
+                    global::System.Nullable<int> Original_ИНН, 
+                    global::System.Nullable<int> Original_КПП, 
+                    global::System.Nullable<int> Original_ОКПО, 
+                    string Original_Банковские_реквизиты, 
+                    string Original_Бренд, 
+                    string Original_Тип_товара, 
+                    global::System.Nullable<int> Original_Общая_сумма_закупок, 
+                    global::System.Nullable<int> Original_Общая_сумма_возвратов, 
+                    global::System.Nullable<int> _Original_Сумма__закупки_возвраты_, 
+                    global::System.Nullable<int> Original_Депозит, 
+                    global::System.Nullable<int> Original_Долг_перед_поставщиком, 
                     global::System.Nullable<global::System.DateTime> Original_Дата_поступления_товара, 
                     global::System.Nullable<global::System.DateTime> Original_Реальная_дата_привоза, 
-                    bool Original_Просрочка) {
-            if ((Номер_карточки.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Номер_карточки.Value));
-            }
-            else {
+                    bool Original_Просрочка, 
+                    string Original_Примечание) {
+            if ((ФИО == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((ФИО == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ФИО));
+            }
+            if ((Наименование == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ФИО));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Наименование));
             }
-            if ((Пол == null)) {
+            if ((Адрес == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Пол));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Адрес));
             }
-            if ((Должность == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((Телефон.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Телефон.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Должность));
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Руководитель == null)) {
+            if ((Email == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Руководитель));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Email));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(Работающий));
-            if ((Табельный_номер.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Табельный_номер.Value));
+            if ((ИНН.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ИНН.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((КПП.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(КПП.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Бренд.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Бренд.Value));
+            if ((ОКПО.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(ОКПО.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Дата_поступления_товара.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Дата_поступления_товара.Value));
-            }
-            else {
+            if ((Банковские_реквизиты == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Реальная_дата_привоза.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Реальная_дата_привоза.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Банковские_реквизиты));
+            }
+            if ((Бренд == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(Просрочка));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Id));
-            if ((Original_Номер_карточки.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Номер_карточки.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Бренд));
+            }
+            if ((Тип_товара == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Тип_товара));
+            }
+            if ((Общая_сумма_закупок.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Общая_сумма_закупок.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Общая_сумма_возвратов.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Общая_сумма_возвратов.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((_Сумма__закупки_возвраты_.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(_Сумма__закупки_возвраты_.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Original_ФИО == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+            if ((Депозит.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Депозит.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Долг_перед_поставщиком.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Долг_перед_поставщиком.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_ФИО));
+            if ((Дата_поступления_товара.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Дата_поступления_товара.Value));
             }
-            if ((Original_Пол == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Реальная_дата_привоза.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Реальная_дата_привоза.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Пол));
-            }
-            if ((Original_Должность == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(Просрочка));
+            if ((Примечание == null)) {
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Должность));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Примечание));
             }
-            if ((Original_Руководитель == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Руководитель));
-            }
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(Original_Работающий));
-            if ((Original_Табельный_номер.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_Табельный_номер.Value));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_Id));
+            if ((Original_ФИО == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_ФИО));
             }
-            if ((Original_Бренд.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_Бренд.Value));
+            if ((Original_Наименование == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Наименование));
+            }
+            if ((Original_Адрес == null)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_Адрес));
+            }
+            if ((Original_Телефон.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_Телефон.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ИНН.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_ИНН.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            if ((Original_КПП.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_КПП.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ОКПО.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(Original_ОКПО.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Банковские_реквизиты == null)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_Банковские_реквизиты));
+            }
+            if ((Original_Бренд == null)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_Бренд));
+            }
+            if ((Original_Тип_товара == null)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_Тип_товара));
+            }
+            if ((Original_Общая_сумма_закупок.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_Общая_сумма_закупок.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Общая_сумма_возвратов.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_Общая_сумма_возвратов.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            if ((_Original_Сумма__закупки_возвраты_.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(_Original_Сумма__закупки_возвраты_.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Депозит.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_Депозит.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Долг_перед_поставщиком.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((int)(Original_Долг_перед_поставщиком.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
             if ((Original_Дата_поступления_товара.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((System.DateTime)(Original_Дата_поступления_товара.Value));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((System.DateTime)(Original_Дата_поступления_товара.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             if ((Original_Реальная_дата_привоза.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_Реальная_дата_привоза.Value));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((System.DateTime)(Original_Реальная_дата_привоза.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[33].Value = ((bool)(Original_Просрочка));
+            this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[56].Value = ((bool)(Original_Просрочка));
+            if ((Original_Примечание == null)) {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_Примечание));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -18556,100 +19605,177 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "ПоставщикиЗапрос";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Номер карточки", "Номер карточки");
             tableMapping.ColumnMappings.Add("ФИО", "ФИО");
-            tableMapping.ColumnMappings.Add("Пол", "Пол");
-            tableMapping.ColumnMappings.Add("Должность", "Должность");
-            tableMapping.ColumnMappings.Add("Руководитель", "Руководитель");
-            tableMapping.ColumnMappings.Add("Работающий", "Работающий");
-            tableMapping.ColumnMappings.Add("Табельный_номер", "Табельный_номер");
+            tableMapping.ColumnMappings.Add("Наименование", "Наименование");
+            tableMapping.ColumnMappings.Add("Адрес", "Адрес");
+            tableMapping.ColumnMappings.Add("Телефон", "Телефон");
+            tableMapping.ColumnMappings.Add("Email", "Email");
+            tableMapping.ColumnMappings.Add("ИНН", "ИНН");
+            tableMapping.ColumnMappings.Add("КПП", "КПП");
+            tableMapping.ColumnMappings.Add("ОКПО", "ОКПО");
+            tableMapping.ColumnMappings.Add("Банковские реквизиты", "Банковские реквизиты");
             tableMapping.ColumnMappings.Add("Бренд", "Бренд");
+            tableMapping.ColumnMappings.Add("Тип товара", "Тип товара");
+            tableMapping.ColumnMappings.Add("Общая сумма закупок", "Общая сумма закупок");
+            tableMapping.ColumnMappings.Add("Общая сумма возвратов", "Общая сумма возвратов");
+            tableMapping.ColumnMappings.Add("Сумма (закупки-возвраты)", "Сумма (закупки-возвраты)");
+            tableMapping.ColumnMappings.Add("Депозит", "Депозит");
+            tableMapping.ColumnMappings.Add("Долг перед поставщиком", "Долг перед поставщиком");
             tableMapping.ColumnMappings.Add("Дата поступления товара", "Дата поступления товара");
             tableMapping.ColumnMappings.Add("Реальная дата привоза", "Реальная дата привоза");
             tableMapping.ColumnMappings.Add("Просрочка", "Просрочка");
+            tableMapping.ColumnMappings.Add("Примечание", "Примечание");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Поставщики` WHERE ((`Id` = ?) AND ((? = 1 AND `Номер карточки` IS NULL) OR (`Номер карточки` = ?)) AND ((? = 1 AND `ФИО` IS NULL) OR (`ФИО` = ?)) AND ((? = 1 AND `Пол` IS NULL) OR (`Пол` = ?)) AND ((? = 1 AND `Должность` IS NULL) OR (`Должность` = ?)) AND ((? = 1 AND `Руководитель` IS NULL) OR (`Руководитель` = ?)) AND ((? = 1 AND `Работающий` IS NULL) OR (`Работающий` = ?)) AND ((? = 1 AND `Табельный_номер` IS NULL) OR (`Табельный_номер` = ?)) AND ((? = 1 AND `Бренд` IS NULL) OR (`Бренд` = ?)) AND ((? = 1 AND `Дата поступления товара` IS NULL) OR (`Дата поступления товара` = ?)) AND ((? = 1 AND `Реальная дата привоза` IS NULL) OR (`Реальная дата привоза` = ?)) AND ((? = 1 AND `Просрочка` IS NULL) OR (`Просрочка` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Поставщики` WHERE ((`Id` = ?) AND ((? = 1 AND `ФИО` IS NULL) OR (`ФИО` = ?)) AND ((? = 1 AND `Наименование` IS NULL) OR (`Наименование` = ?)) AND ((? = 1 AND `Адрес` IS NULL) OR (`Адрес` = ?)) AND ((? = 1 AND `Телефон` IS NULL) OR (`Телефон` = ?)) AND ((? = 1 AND `ИНН` IS NULL) OR (`ИНН` = ?)) AND ((? = 1 AND `КПП` IS NULL) OR (`КПП` = ?)) AND ((? = 1 AND `ОКПО` IS NULL) OR (`ОКПО` = ?)) AND ((? = 1 AND `Банковские реквизиты` IS NULL) OR (`Банковские реквизиты` = ?)) AND ((? = 1 AND `Бренд` IS NULL) OR (`Бренд` = ?)) AND ((? = 1 AND `Тип товара` IS NULL) OR (`Тип товара` = ?)) AND ((? = 1 AND `Общая сумма закупок` IS NULL) OR (`Общая сумма закупок` = ?)) AND ((? = 1 AND `Общая сумма возвратов` IS NULL) OR (`Общая сумма возвратов` = ?)) AND ((? = 1 AND `Сумма (закупки-возвраты)` IS NULL) OR (`Сумма (закупки-возвраты)` = ?)) AND ((? = 1 AND `Депозит` IS NULL) OR (`Депозит` = ?)) AND ((? = 1 AND `Долг перед поставщиком` IS NULL) OR (`Долг перед поставщиком` = ?)) AND ((? = 1 AND `Дата поступления товара` IS NULL) OR (`Дата поступления товара` = ?)) AND ((? = 1 AND `Реальная дата привоза` IS NULL) OR (`Реальная дата привоза` = ?)) AND ((? = 1 AND `Просрочка` IS NULL) OR (`Просрочка` = ?)) AND ((? = 1 AND `Примечание` IS NULL) OR (`Примечание` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ФИО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ФИО", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Пол", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Пол", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Должность", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Должность", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Руководитель", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Руководитель", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Работающий", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Работающий", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Наименование", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Адрес", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Адрес", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Банковские_реквизиты", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Банковские_реквизиты", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Бренд", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Тип_товара", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Тип_товара", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Просрочка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Просрочка", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Примечание", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Примечание", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Поставщики` (`Номер карточки`, `ФИО`, `Пол`, `Должность`, `Руководит" +
-                "ель`, `Работающий`, `Табельный_номер`, `Бренд`, `Дата поступления товара`, `Реал" +
-                "ьная дата привоза`, `Просрочка`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Поставщики` (`ФИО`, `Наименование`, `Адрес`, `Телефон`, `Email`, `ИНН`, `КПП`, `ОКПО`, `Банковские реквизиты`, `Бренд`, `Тип товара`, `Общая сумма закупок`, `Общая сумма возвратов`, `Сумма (закупки-возвраты)`, `Депозит`, `Долг перед поставщиком`, `Дата поступления товара`, `Реальная дата привоза`, `Просрочка`, `Примечание`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ФИО", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Пол", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Должность", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Руководитель", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Работающий", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Адрес", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Банковские_реквизиты", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Бренд", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Тип_товара", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Просрочка", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Примечание", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Поставщики` SET `Номер карточки` = ?, `ФИО` = ?, `Пол` = ?, `Должность` = ?, `Руководитель` = ?, `Работающий` = ?, `Табельный_номер` = ?, `Бренд` = ?, `Дата поступления товара` = ?, `Реальная дата привоза` = ?, `Просрочка` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `Номер карточки` IS NULL) OR (`Номер карточки` = ?)) AND ((? = 1 AND `ФИО` IS NULL) OR (`ФИО` = ?)) AND ((? = 1 AND `Пол` IS NULL) OR (`Пол` = ?)) AND ((? = 1 AND `Должность` IS NULL) OR (`Должность` = ?)) AND ((? = 1 AND `Руководитель` IS NULL) OR (`Руководитель` = ?)) AND ((? = 1 AND `Работающий` IS NULL) OR (`Работающий` = ?)) AND ((? = 1 AND `Табельный_номер` IS NULL) OR (`Табельный_номер` = ?)) AND ((? = 1 AND `Бренд` IS NULL) OR (`Бренд` = ?)) AND ((? = 1 AND `Дата поступления товара` IS NULL) OR (`Дата поступления товара` = ?)) AND ((? = 1 AND `Реальная дата привоза` IS NULL) OR (`Реальная дата привоза` = ?)) AND ((? = 1 AND `Просрочка` IS NULL) OR (`Просрочка` = ?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `Поставщики` SET `ФИО` = ?, `Наименование` = ?, `Адрес` = ?, `Телефон` = ?" +
+                ", `Email` = ?, `ИНН` = ?, `КПП` = ?, `ОКПО` = ?, `Банковские реквизиты` = ?, `Бр" +
+                "енд` = ?, `Тип товара` = ?, `Общая сумма закупок` = ?, `Общая сумма возвратов` =" +
+                " ?, `Сумма (закупки-возвраты)` = ?, `Депозит` = ?, `Долг перед поставщиком` = ?," +
+                " `Дата поступления товара` = ?, `Реальная дата привоза` = ?, `Просрочка` = ?, `П" +
+                "римечание` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `ФИО` IS NULL) OR (`ФИО` = ?)) " +
+                "AND ((? = 1 AND `Наименование` IS NULL) OR (`Наименование` = ?)) AND ((? = 1 AND" +
+                " `Адрес` IS NULL) OR (`Адрес` = ?)) AND ((? = 1 AND `Телефон` IS NULL) OR (`Теле" +
+                "фон` = ?)) AND ((? = 1 AND `ИНН` IS NULL) OR (`ИНН` = ?)) AND ((? = 1 AND `КПП` " +
+                "IS NULL) OR (`КПП` = ?)) AND ((? = 1 AND `ОКПО` IS NULL) OR (`ОКПО` = ?)) AND ((" +
+                "? = 1 AND `Банковские реквизиты` IS NULL) OR (`Банковские реквизиты` = ?)) AND (" +
+                "(? = 1 AND `Бренд` IS NULL) OR (`Бренд` = ?)) AND ((? = 1 AND `Тип товара` IS NU" +
+                "LL) OR (`Тип товара` = ?)) AND ((? = 1 AND `Общая сумма закупок` IS NULL) OR (`О" +
+                "бщая сумма закупок` = ?)) AND ((? = 1 AND `Общая сумма возвратов` IS NULL) OR (`" +
+                "Общая сумма возвратов` = ?)) AND ((? = 1 AND `Сумма (закупки-возвраты)` IS NULL)" +
+                " OR (`Сумма (закупки-возвраты)` = ?)) AND ((? = 1 AND `Депозит` IS NULL) OR (`Де" +
+                "позит` = ?)) AND ((? = 1 AND `Долг перед поставщиком` IS NULL) OR (`Долг перед п" +
+                "оставщиком` = ?)) AND ((? = 1 AND `Дата поступления товара` IS NULL) OR (`Дата п" +
+                "оступления товара` = ?)) AND ((? = 1 AND `Реальная дата привоза` IS NULL) OR (`Р" +
+                "еальная дата привоза` = ?)) AND ((? = 1 AND `Просрочка` IS NULL) OR (`Просрочка`" +
+                " = ?)) AND ((? = 1 AND `Примечание` IS NULL) OR (`Примечание` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ФИО", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Пол", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Должность", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Руководитель", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Работающий", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Адрес", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Банковские_реквизиты", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Бренд", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Тип_товара", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Просрочка", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Примечание", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер_карточки", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер карточки", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ФИО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ФИО", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФИО", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Пол", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Пол", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Должность", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Должность", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Руководитель", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Руководитель", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Руководитель", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Работающий", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Работающий", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Работающий", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Табельный_номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Табельный_номер", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Наименование", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Наименование", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Наименование", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Адрес", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Адрес", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ИНН", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИНН", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_КПП", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "КПП", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ОКПО", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ОКПО", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Банковские_реквизиты", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Банковские_реквизиты", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Банковские реквизиты", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Бренд", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Бренд", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Бренд", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Тип_товара", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Тип_товара", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Тип товара", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Общая_сумма_закупок", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма закупок", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Общая_сумма_возвратов", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Общая сумма возвратов", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Сумма_(закупки-возвраты)", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Сумма (закупки-возвраты)", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Депозит", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Депозит", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Долг_перед_поставщиком", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Долг перед поставщиком", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Дата_поступления_товара", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата поступления товара", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Реальная_дата_привоза", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Реальная дата привоза", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Просрочка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Просрочка", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Просрочка", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Примечание", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Примечание", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Примечание", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18665,9 +19791,7 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, [Номер карточки], ФИО, Пол, Должность, Руководитель, Работающий, [Табе" +
-                "льный_номер], Бренд, [Дата поступления товара], [Реальная дата привоза], Просроч" +
-                "ка\r\nFROM     Поставщики";
+            this._commandCollection[0].CommandText = @"SELECT Id, ФИО, Наименование, Адрес, Телефон, Email, ИНН, КПП, ОКПО, [Банковские реквизиты], Бренд, [Тип товара], [Общая сумма закупок], [Общая сумма возвратов], [Сумма (закупки-возвраты)], Депозит, [Долг перед поставщиком], [Дата поступления товара], [Реальная дата привоза], Просрочка, Примечание FROM Поставщики";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -18728,84 +19852,174 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, global::System.Nullable<int> Original_Номер_карточки, string Original_ФИО, string Original_Пол, string Original_Должность, string Original_Руководитель, bool Original_Работающий, global::System.Nullable<int> Original_Табельный_номер, global::System.Nullable<int> Original_Бренд, global::System.Nullable<global::System.DateTime> Original_Дата_поступления_товара, global::System.Nullable<global::System.DateTime> Original_Реальная_дата_привоза, bool Original_Просрочка) {
+        public virtual int Delete(
+                    int Original_Id, 
+                    string Original_ФИО, 
+                    string Original_Наименование, 
+                    string Original_Адрес, 
+                    global::System.Nullable<int> Original_Телефон, 
+                    global::System.Nullable<int> Original_ИНН, 
+                    global::System.Nullable<int> Original_КПП, 
+                    global::System.Nullable<int> Original_ОКПО, 
+                    string Original_Банковские_реквизиты, 
+                    string Original_Бренд, 
+                    string Original_Тип_товара, 
+                    global::System.Nullable<int> Original_Общая_сумма_закупок, 
+                    global::System.Nullable<int> Original_Общая_сумма_возвратов, 
+                    global::System.Nullable<int> _Original_Сумма__закупки_возвраты_, 
+                    global::System.Nullable<int> Original_Депозит, 
+                    global::System.Nullable<int> Original_Долг_перед_поставщиком, 
+                    global::System.Nullable<global::System.DateTime> Original_Дата_поступления_товара, 
+                    global::System.Nullable<global::System.DateTime> Original_Реальная_дата_привоза, 
+                    bool Original_Просрочка, 
+                    string Original_Примечание) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_Номер_карточки.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Номер_карточки.Value));
-            }
-            else {
+            if ((Original_ФИО == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_ФИО == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ФИО));
+            }
+            if ((Original_Наименование == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_ФИО));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Наименование));
             }
-            if ((Original_Пол == null)) {
+            if ((Original_Адрес == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Пол));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Адрес));
             }
-            if ((Original_Должность == null)) {
+            if ((Original_Телефон.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Телефон.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Должность));
+            if ((Original_ИНН.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_ИНН.Value));
             }
-            if ((Original_Руководитель == null)) {
+            else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Руководитель));
+            if ((Original_КПП.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_КПП.Value));
             }
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((bool)(Original_Работающий));
-            if ((Original_Табельный_номер.HasValue == true)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ОКПО.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_Табельный_номер.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_ОКПО.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_Бренд.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_Бренд.Value));
-            }
-            else {
+            if ((Original_Банковские_реквизиты == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_Дата_поступления_товара.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_Дата_поступления_товара.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_Банковские_реквизиты));
+            }
+            if ((Original_Бренд == null)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_Реальная_дата_привоза.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_Реальная_дата_привоза.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_Бренд));
+            }
+            if ((Original_Тип_товара == null)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[22].Value = ((bool)(Original_Просрочка));
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_Тип_товара));
+            }
+            if ((Original_Общая_сумма_закупок.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_Общая_сумма_закупок.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Общая_сумма_возвратов.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_Общая_сумма_возвратов.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((_Original_Сумма__закупки_возвраты_.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(_Original_Сумма__закупки_возвраты_.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Депозит.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_Депозит.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Долг_перед_поставщиком.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((int)(Original_Долг_перед_поставщиком.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Дата_поступления_товара.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((System.DateTime)(Original_Дата_поступления_товара.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Реальная_дата_привоза.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((System.DateTime)(Original_Реальная_дата_привоза.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[36].Value = ((bool)(Original_Просрочка));
+            if ((Original_Примечание == null)) {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((string)(Original_Примечание));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -18826,63 +20040,142 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> Номер_карточки, string ФИО, string Пол, string Должность, string Руководитель, bool Работающий, global::System.Nullable<int> Табельный_номер, global::System.Nullable<int> Бренд, global::System.Nullable<global::System.DateTime> Дата_поступления_товара, global::System.Nullable<global::System.DateTime> Реальная_дата_привоза, bool Просрочка) {
-            if ((Номер_карточки.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Номер_карточки.Value));
-            }
-            else {
+        public virtual int Insert(
+                    string ФИО, 
+                    string Наименование, 
+                    string Адрес, 
+                    global::System.Nullable<int> Телефон, 
+                    string Email, 
+                    global::System.Nullable<int> ИНН, 
+                    global::System.Nullable<int> КПП, 
+                    global::System.Nullable<int> ОКПО, 
+                    string Банковские_реквизиты, 
+                    string Бренд, 
+                    string Тип_товара, 
+                    global::System.Nullable<int> Общая_сумма_закупок, 
+                    global::System.Nullable<int> Общая_сумма_возвратов, 
+                    global::System.Nullable<int> _Сумма__закупки_возвраты_, 
+                    global::System.Nullable<int> Депозит, 
+                    global::System.Nullable<int> Долг_перед_поставщиком, 
+                    global::System.Nullable<global::System.DateTime> Дата_поступления_товара, 
+                    global::System.Nullable<global::System.DateTime> Реальная_дата_привоза, 
+                    bool Просрочка, 
+                    string Примечание) {
+            if ((ФИО == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((ФИО == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ФИО));
+            }
+            if ((Наименование == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ФИО));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Наименование));
             }
-            if ((Пол == null)) {
+            if ((Адрес == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Пол));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Адрес));
             }
-            if ((Должность == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((Телефон.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Телефон.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Должность));
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Руководитель == null)) {
+            if ((Email == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Руководитель));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Email));
             }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(Работающий));
-            if ((Табельный_номер.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(Табельный_номер.Value));
+            if ((ИНН.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(ИНН.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((КПП.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(КПП.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Бренд.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Бренд.Value));
+            if ((ОКПО.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(ОКПО.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Дата_поступления_товара.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(Дата_поступления_товара.Value));
-            }
-            else {
+            if ((Банковские_реквизиты == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Реальная_дата_привоза.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(Реальная_дата_привоза.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Банковские_реквизиты));
+            }
+            if ((Бренд == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(Просрочка));
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Бренд));
+            }
+            if ((Тип_товара == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Тип_товара));
+            }
+            if ((Общая_сумма_закупок.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(Общая_сумма_закупок.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Общая_сумма_возвратов.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(Общая_сумма_возвратов.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((_Сумма__закупки_возвраты_.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(_Сумма__закупки_возвраты_.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Депозит.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(Депозит.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Долг_перед_поставщиком.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(Долг_перед_поставщиком.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Дата_поступления_товара.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((System.DateTime)(Дата_поступления_товара.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Реальная_дата_привоза.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((System.DateTime)(Реальная_дата_привоза.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[18].Value = ((bool)(Просрочка));
+            if ((Примечание == null)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(Примечание));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -18904,162 +20197,308 @@ namespace Mobile_Warehouse.MobExpressDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    global::System.Nullable<int> Номер_карточки, 
                     string ФИО, 
-                    string Пол, 
-                    string Должность, 
-                    string Руководитель, 
-                    bool Работающий, 
-                    global::System.Nullable<int> Табельный_номер, 
-                    global::System.Nullable<int> Бренд, 
+                    string Наименование, 
+                    string Адрес, 
+                    global::System.Nullable<int> Телефон, 
+                    string Email, 
+                    global::System.Nullable<int> ИНН, 
+                    global::System.Nullable<int> КПП, 
+                    global::System.Nullable<int> ОКПО, 
+                    string Банковские_реквизиты, 
+                    string Бренд, 
+                    string Тип_товара, 
+                    global::System.Nullable<int> Общая_сумма_закупок, 
+                    global::System.Nullable<int> Общая_сумма_возвратов, 
+                    global::System.Nullable<int> _Сумма__закупки_возвраты_, 
+                    global::System.Nullable<int> Депозит, 
+                    global::System.Nullable<int> Долг_перед_поставщиком, 
                     global::System.Nullable<global::System.DateTime> Дата_поступления_товара, 
                     global::System.Nullable<global::System.DateTime> Реальная_дата_привоза, 
                     bool Просрочка, 
+                    string Примечание, 
                     int Original_Id, 
-                    global::System.Nullable<int> Original_Номер_карточки, 
                     string Original_ФИО, 
-                    string Original_Пол, 
-                    string Original_Должность, 
-                    string Original_Руководитель, 
-                    bool Original_Работающий, 
-                    global::System.Nullable<int> Original_Табельный_номер, 
-                    global::System.Nullable<int> Original_Бренд, 
+                    string Original_Наименование, 
+                    string Original_Адрес, 
+                    global::System.Nullable<int> Original_Телефон, 
+                    global::System.Nullable<int> Original_ИНН, 
+                    global::System.Nullable<int> Original_КПП, 
+                    global::System.Nullable<int> Original_ОКПО, 
+                    string Original_Банковские_реквизиты, 
+                    string Original_Бренд, 
+                    string Original_Тип_товара, 
+                    global::System.Nullable<int> Original_Общая_сумма_закупок, 
+                    global::System.Nullable<int> Original_Общая_сумма_возвратов, 
+                    global::System.Nullable<int> _Original_Сумма__закупки_возвраты_, 
+                    global::System.Nullable<int> Original_Депозит, 
+                    global::System.Nullable<int> Original_Долг_перед_поставщиком, 
                     global::System.Nullable<global::System.DateTime> Original_Дата_поступления_товара, 
                     global::System.Nullable<global::System.DateTime> Original_Реальная_дата_привоза, 
-                    bool Original_Просрочка) {
-            if ((Номер_карточки.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Номер_карточки.Value));
-            }
-            else {
+                    bool Original_Просрочка, 
+                    string Original_Примечание) {
+            if ((ФИО == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((ФИО == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ФИО));
+            }
+            if ((Наименование == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ФИО));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Наименование));
             }
-            if ((Пол == null)) {
+            if ((Адрес == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Пол));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Адрес));
             }
-            if ((Должность == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((Телефон.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Телефон.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Должность));
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Руководитель == null)) {
+            if ((Email == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Руководитель));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Email));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(Работающий));
-            if ((Табельный_номер.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Табельный_номер.Value));
+            if ((ИНН.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ИНН.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((КПП.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(КПП.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Бренд.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Бренд.Value));
+            if ((ОКПО.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(ОКПО.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Дата_поступления_товара.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Дата_поступления_товара.Value));
-            }
-            else {
+            if ((Банковские_реквизиты == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Реальная_дата_привоза.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Реальная_дата_привоза.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Банковские_реквизиты));
+            }
+            if ((Бренд == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(Просрочка));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Id));
-            if ((Original_Номер_карточки.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Номер_карточки.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Бренд));
+            }
+            if ((Тип_товара == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Тип_товара));
+            }
+            if ((Общая_сумма_закупок.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Общая_сумма_закупок.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Общая_сумма_возвратов.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Общая_сумма_возвратов.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((_Сумма__закупки_возвраты_.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(_Сумма__закупки_возвраты_.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Original_ФИО == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+            if ((Депозит.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Депозит.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Долг_перед_поставщиком.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Долг_перед_поставщиком.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_ФИО));
+            if ((Дата_поступления_товара.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Дата_поступления_товара.Value));
             }
-            if ((Original_Пол == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Реальная_дата_привоза.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Реальная_дата_привоза.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Пол));
-            }
-            if ((Original_Должность == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(Просрочка));
+            if ((Примечание == null)) {
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Должность));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Примечание));
             }
-            if ((Original_Руководитель == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Руководитель));
-            }
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(Original_Работающий));
-            if ((Original_Табельный_номер.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_Табельный_номер.Value));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_Id));
+            if ((Original_ФИО == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_ФИО));
             }
-            if ((Original_Бренд.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_Бренд.Value));
+            if ((Original_Наименование == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Наименование));
+            }
+            if ((Original_Адрес == null)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_Адрес));
+            }
+            if ((Original_Телефон.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_Телефон.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ИНН.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_ИНН.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            if ((Original_КПП.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_КПП.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ОКПО.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(Original_ОКПО.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Банковские_реквизиты == null)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_Банковские_реквизиты));
+            }
+            if ((Original_Бренд == null)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_Бренд));
+            }
+            if ((Original_Тип_товара == null)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_Тип_товара));
+            }
+            if ((Original_Общая_сумма_закупок.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_Общая_сумма_закупок.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Общая_сумма_возвратов.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_Общая_сумма_возвратов.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            if ((_Original_Сумма__закупки_возвраты_.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(_Original_Сумма__закупки_возвраты_.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Депозит.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_Депозит.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Долг_перед_поставщиком.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((int)(Original_Долг_перед_поставщиком.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
             if ((Original_Дата_поступления_товара.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((System.DateTime)(Original_Дата_поступления_товара.Value));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((System.DateTime)(Original_Дата_поступления_товара.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             if ((Original_Реальная_дата_привоза.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_Реальная_дата_привоза.Value));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((System.DateTime)(Original_Реальная_дата_привоза.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[33].Value = ((bool)(Original_Просрочка));
+            this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[56].Value = ((bool)(Original_Просрочка));
+            if ((Original_Примечание == null)) {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_Примечание));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

@@ -33,11 +33,6 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.полDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.брендDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаПоступленияТовараDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.реальнаяДатаПривозаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.поставщикиЗапросBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mobExpressDataSet = new Mobile_Warehouse.MobExpressDataSet();
             this.buttonPrint = new System.Windows.Forms.Button();
@@ -53,6 +48,9 @@
             this.поставщикиЗапросTableAdapter = new Mobile_Warehouse.MobExpressDataSetTableAdapters.ПоставщикиЗапросTableAdapter();
             this.поставщикиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.поставщикиTableAdapter = new Mobile_Warehouse.MobExpressDataSetTableAdapters.ПоставщикиTableAdapter();
+            this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.брендDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаПоступленияТовараDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -102,57 +100,15 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.фИОDataGridViewTextBoxColumn,
-            this.полDataGridViewTextBoxColumn,
             this.брендDataGridViewTextBoxColumn,
-            this.датаПоступленияТовараDataGridViewTextBoxColumn,
-            this.реальнаяДатаПривозаDataGridViewTextBoxColumn});
+            this.датаПоступленияТовараDataGridViewTextBoxColumn});
             this.dataGridView.DataSource = this.поставщикиЗапросBindingSource;
-            this.dataGridView.Location = new System.Drawing.Point(8, 106);
+            this.dataGridView.Location = new System.Drawing.Point(8, 108);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(1457, 628);
             this.dataGridView.TabIndex = 16;
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
-            // 
-            // фИОDataGridViewTextBoxColumn
-            // 
-            this.фИОDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.фИОDataGridViewTextBoxColumn.DataPropertyName = "ФИО";
-            this.фИОDataGridViewTextBoxColumn.HeaderText = "ФИО";
-            this.фИОDataGridViewTextBoxColumn.Name = "фИОDataGridViewTextBoxColumn";
-            this.фИОDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // полDataGridViewTextBoxColumn
-            // 
-            this.полDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.полDataGridViewTextBoxColumn.DataPropertyName = "Пол";
-            this.полDataGridViewTextBoxColumn.HeaderText = "Пол";
-            this.полDataGridViewTextBoxColumn.Name = "полDataGridViewTextBoxColumn";
-            this.полDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // брендDataGridViewTextBoxColumn
-            // 
-            this.брендDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.брендDataGridViewTextBoxColumn.DataPropertyName = "Бренд";
-            this.брендDataGridViewTextBoxColumn.HeaderText = "Бренд";
-            this.брендDataGridViewTextBoxColumn.Name = "брендDataGridViewTextBoxColumn";
-            this.брендDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // датаПоступленияТовараDataGridViewTextBoxColumn
-            // 
-            this.датаПоступленияТовараDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.датаПоступленияТовараDataGridViewTextBoxColumn.DataPropertyName = "Дата поступления товара";
-            this.датаПоступленияТовараDataGridViewTextBoxColumn.HeaderText = "Дата поступления товара";
-            this.датаПоступленияТовараDataGridViewTextBoxColumn.Name = "датаПоступленияТовараDataGridViewTextBoxColumn";
-            this.датаПоступленияТовараDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // реальнаяДатаПривозаDataGridViewTextBoxColumn
-            // 
-            this.реальнаяДатаПривозаDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.реальнаяДатаПривозаDataGridViewTextBoxColumn.DataPropertyName = "Реальная дата привоза";
-            this.реальнаяДатаПривозаDataGridViewTextBoxColumn.HeaderText = "Реальная дата привоза";
-            this.реальнаяДатаПривозаDataGridViewTextBoxColumn.Name = "реальнаяДатаПривозаDataGridViewTextBoxColumn";
-            this.реальнаяДатаПривозаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // поставщикиЗапросBindingSource
             // 
@@ -284,6 +240,30 @@
             // 
             this.поставщикиTableAdapter.ClearBeforeFill = true;
             // 
+            // фИОDataGridViewTextBoxColumn
+            // 
+            this.фИОDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.фИОDataGridViewTextBoxColumn.DataPropertyName = "ФИО";
+            this.фИОDataGridViewTextBoxColumn.HeaderText = "ФИО поставщика";
+            this.фИОDataGridViewTextBoxColumn.Name = "фИОDataGridViewTextBoxColumn";
+            this.фИОDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // брендDataGridViewTextBoxColumn
+            // 
+            this.брендDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.брендDataGridViewTextBoxColumn.DataPropertyName = "Бренд";
+            this.брендDataGridViewTextBoxColumn.HeaderText = "Бренд";
+            this.брендDataGridViewTextBoxColumn.Name = "брендDataGridViewTextBoxColumn";
+            this.брендDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // датаПоступленияТовараDataGridViewTextBoxColumn
+            // 
+            this.датаПоступленияТовараDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.датаПоступленияТовараDataGridViewTextBoxColumn.DataPropertyName = "Дата поступления товара";
+            this.датаПоступленияТовараDataGridViewTextBoxColumn.HeaderText = "Дата поступления товара";
+            this.датаПоступленияТовараDataGridViewTextBoxColumn.Name = "датаПоступленияТовараDataGridViewTextBoxColumn";
+            this.датаПоступленияТовараDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Объекты
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -325,12 +305,10 @@
         private MobExpressDataSet mobExpressDataSet;
         private System.Windows.Forms.BindingSource поставщикиЗапросBindingSource;
         private MobExpressDataSetTableAdapters.ПоставщикиЗапросTableAdapter поставщикиЗапросTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn фИОDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn полDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn брендDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn датаПоступленияТовараDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn реальнаяДатаПривозаDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource поставщикиBindingSource;
         private MobExpressDataSetTableAdapters.ПоставщикиTableAdapter поставщикиTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn фИОDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn брендDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датаПоступленияТовараDataGridViewTextBoxColumn;
     }
 }
